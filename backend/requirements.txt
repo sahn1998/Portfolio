@@ -1,0 +1,15 @@
+django
+djangorestframework
+djangorestframework-jwt
+django-rest-knox
+django-cors-headers
+django-cors-middleware
+django-extensions
+django-uuidfield
+drf-yasg
+pylint
+pylint-django
+isort
+Pillow
+pyproj
+django-cleanup

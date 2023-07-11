@@ -1,0 +1,51 @@
+API_KEY = "dZ9m5DP9WDUDiLcjDQDicGs1mKtXkkwJYw41kqJIQjghZNk+7wcSH4OTPqZ/AdxoKSqYKEkpF+qfPQ/vr35NiA=="
+API_URL = 'http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTrade'
+API_SECOND_KEY = "wi2/6nKK9DZxLHciGjABilyNlbpit1QwNGsT56qPfnIWkoa9IXVZgrkNJwu8WdoGlwXdyEFZD9g9LFmPK+wkdQ=="
+
+SEOUL_CITY_CODES = {
+    'Gangnam-gu' : '11680',
+    'Gangdong-gu' : '11740',
+    'Gangbuk-gu' : '11305',
+    'Gangseo-gu' : '11500',
+    'Gwanak-gu' : '11620',
+    'Gwangjin-gu' : '11215',
+    "Guro-gu" : '11530',
+    "Geumcheon-gu" : '11545',
+    "Nowon-gu" : '11350',
+    "Dobong-gu" : '11320',
+    "Dongdaemun-gu" : '11230',
+    "Dongjak-gu" : '11590',
+    "Mapo-gu" : '11440',
+    "Seodaemun-gu" : '11410',
+    "Seocho-gu" : '11650',
+    "Seongdong-gu" : '11200',
+    "Seongbuk-gu" : '11290',
+    "Songpa-gu" : '11710',
+    "Yangcheon-gu" : '11470',
+    "Yeongdeungpo-gu" : '11560',
+    "Yongsan-gu" : '11170',
+    "Eunpyeong-gu" : '11380',
+    "Jongno-gu" : '11110',
+    "Jung-gu" : '11140',
+    "Jungnang-gu" : '11260'
+}
+
+KOREA_STATE_CODE_PREFIX = {
+    "Gangwon-do" : "42",
+    "Gyeonggi-do" : "41",
+    "Gyeongsangnam-do" : "48",
+    "Gyeongsangbuk-do" : "47",
+    "Gwangju" : "29",
+    "Daegu" : "27",
+    "Daejeon" : "30",
+    "Busan" : "26",
+    "Seoul" : "11",
+    "Sejong-si" : "36",
+    "Ulsan" : "31",
+    "Incheon" : "28",
+    "Jeollanam-do" : "46",
+    "Jeollabuk-do" : "45",
+    "Jeju=do" : "50",
+    "Chungcheongnam-do" : "44",
+    "Chungcheongbuk-do" : "43",
+}

@@ -1,0 +1,48 @@
+#intro {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    margin-bottom: 3rem;
+}
+
+.main-page-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-page-intro h1 {
+    font-family: "Titillium_Web variant0", Tofu;
+    letter-spacing: .3rem;
+    font-size: 56px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.main-page .visiting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-cen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-page-intro span {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+    color: rgb(183, 165, 122);
+    line-height: 26px;
+}

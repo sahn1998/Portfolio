@@ -1,0 +1,12 @@
+.circle {
+    position: absolute;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+    /* Apply animation to this element */	
+    transform: translate(left, top);
+}

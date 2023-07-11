@@ -1,0 +1,68 @@
+/* Global styles */
+.content {
+    max-width: 1210px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav-content-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+a:link { 
+    text-decoration-line: none;
+}
+
+a:visited {
+    text-decoration-line: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration-line: none;
+    color: rgb(183, 165, 122);
+}
+
+a:active {
+    text-decoration-line: none;
+}
+
+/* Navigation Bar styles */
+.hyun-logo img {
+    width: auto;
+    height: 86px;
+}
+
+.links-wrapper {
+    display: flex;
+    padding-left: calc(100% / 12 * 6.6);;
+    align-items: center;
+}
+
+.links {
+    padding-right: 2rem;
+    font-family: "Titillium_Web variant0", Tofu;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.link-logos {
+    display: flex;
+    flex-direction: row;
+}
+
+.link-logo {
+    padding-right: 1.5rem;
+}
+
+.link-logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-logo img {
+    width: auto;
+    height: 26px;
+}

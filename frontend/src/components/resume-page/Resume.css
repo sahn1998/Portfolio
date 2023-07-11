@@ -1,0 +1,159 @@
+/* Resume Page Global styles */
+.experience-wrapper {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.desrcription-paragraph {
+    line-height: 2.22222rem;
+    font-size: 1rem;
+}
+
+.description-span {
+    font-family: "Titillium_Web variant6", Tofu;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.experience-content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-wrapper {
+    margin: 1.5rem 0;
+    padding-left: 10px;
+    padding-bottom: 3.5rem;
+}
+
+.image-row {
+    display: flex;
+    flex-direction: row;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.image {
+    padding-right: 10px;
+    width: calc(100% / 12 * 2.9);
+    max-width: calc(100% / 12 * 2.9);
+    flex: 0 0 auto;
+    flex-basis: calc(100% / 12 * 2.9);
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.image-description-wrapper {
+    padding-bottom: 4.5rem;
+}
+
+.image-description span {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 5px;
+}
+
+/* Spacer lines between each experience */
+.spacer {
+    padding-bottom: 2.5rem;
+}
+
+.spacer hr {
+    background-color: aliceblue;
+}
+
+/* --------------------------------------------------------------- */
+/* Section 1 styles (Header) */
+#experience-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 3.22222222222rem;
+    padding-bottom: 3.22222222222rem;
+}
+
+.experience h1 {
+    color: white;
+    font-size: 1.9rem;
+    line-height: 4.33rem;
+}
+
+.experience h1 span {
+    font-family: "Titillium_Web variant8", Tofu;
+    font-weight: 700;
+    font-style: normal;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+    width: 0;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Section 2 styles (ROK Experience) */
+#rok-experience {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.image-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-center img {
+    width: calc(100% / 12 * 6.4);
+    max-width: calc(100% / 12 * 6.4);
+    flex: 0 0 auto;
+    flex-basis: calc(100% / 12 * 6.4);
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* Section 5 (experience)*/
+
+.image-special {
+    width: 100%;
+    height: auto;
+}
+
+.image-special img {
+    width: auto;
+    height: 290px;
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
