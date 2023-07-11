@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Homepage } from "./components/Home";
 import { AboutPage } from './components/about-page/About';
 import { Resume } from './components/resume-page/Resume';
-import { SeoulChoroplethMap } from './portfolio/krhousing/ChoroplethMap';
 
 /**
  * @constructor App representing the current front end for our application.
@@ -21,7 +20,6 @@ class App extends React.Component {
           <Route path="/" element={<Homepage />} />
           <Route path="/aboutme" element={<AboutPage/>} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="/projects" element={<SeoulChoroplethMap />} />
         </Routes>
       </Router>
     );

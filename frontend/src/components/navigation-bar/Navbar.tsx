@@ -38,14 +38,7 @@ export const NavigationBar = (props: Props) => {
                             <a href={'/resume' } style={{
                                 color: props.colorExperience
                             }}>
-                                EXPERIENCE
-                            </a>
-                        </div>
-                        <div className="links">
-                            <a href={'/projects' } style={{
-                                color: props.colorExperience
-                            }}>
-                                PROJECTS
+                                RESUME
                             </a>
                         </div>
                         <div className="link-logos">

@@ -45,11 +45,7 @@ const AboutMe = () => {
                 </span>
                 <div className="padding-tb-30 ">
                     <span className="font-about-me">
-                        So, that is why I ask myself the What's, the Why's, and the How's everyday.
-                    </span>
-                    <br>
-                    </br>
-                    <span className="font-about-me">
+                        So, that is why I ask myself the What's, the Why's, and the How's everyday. 
                         It's like caffeine for me. The curiosity keeps the drive alive. So here you go.
                     </span>
                 </div>
@@ -69,7 +65,7 @@ const WhatWhyHow = () => {
                         What:
                     </span>
                     <span>
-                        I'm passionate about working on data science projects that move society forward while fostering diversity and inclusivity. 
+                        I'm passionate about working on projects that move society forward while fostering diversity and inclusivity. 
                     </span>
                 </div>
                 <div className="row padding-b-40">

@@ -134,6 +134,9 @@ const ConsultingExperience = () => {
                                             <div className="image">  
                                                 <img src={require('../../images/business_impact_group_logo.png')}/>
                                             </div>
+                                            <div className="image-special">  
+                                                <img src={require('../../images/sung_ahn.jpg')}/>
+                                            </div>
                                             <div className="image-special">
                                                 <img src={require('../../images/business_impact_group.jpg')}/>
                                             </div>

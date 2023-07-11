@@ -147,8 +147,9 @@
 /* Section 5 (experience)*/
 
 .image-special {
-    width: 100%;
+    width: auto;
     height: auto;
+    padding-right: 10px;
 }
 
 .image-special img {

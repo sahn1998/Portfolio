@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { PortfolioArea } from './portfolio-area/portfolio-area';
 import { NavigationBar } from './navigation-bar/Navbar';
 import './Home.css'
 import './Global.css'
+import { Portfolio } from './portfolio/Portfolio';
 
 export const Introduction = () => {
     return (
@@ -47,6 +47,7 @@ export const Homepage = () => {
                     <div className="overlay">
                         <div className="sections">
                             <Introduction />
+                            <Portfolio />
                         </div>
                     </div>
                 </div>
