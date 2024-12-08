@@ -177,7 +177,11 @@ export const Resume = () => {
             <div id="contents">
                 <div className="container">
                     <div className="navbar">
-                        <NavigationBar colorExperience={"rgb(183, 165, 122)"}/>
+                        <NavigationBar 
+                            colorHome={"rgb(255, 255, 255)"}
+                            colorAbout={"rgb(255, 255, 255)"}
+                            colorExperience={"rgb(183, 165, 122)"}
+                        />
                     </div>
                     <div className="overlay">
                         <div className="sections">

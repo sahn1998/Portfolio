@@ -104,7 +104,11 @@ export const AboutPage = () => {
             <div id="contents">
                 <div className="container">
                     <div className="navbar">
-                        <NavigationBar colorAbout={"rgb(183, 165, 122)"}/>
+                        <NavigationBar 
+                            colorHome={"rgb(255, 255, 255)"}
+                            colorAbout={"rgb(183, 165, 122)"}
+                            colorExperience={"rgb(255, 255, 255)"}
+                        />
                     </div>
                     <div className="overlay">
                         <div className="sections">
