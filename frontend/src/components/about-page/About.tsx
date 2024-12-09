@@ -25,30 +25,42 @@ const AboutMe = () => {
     return (
         <section id="aboutme-main" className="content">
             <div className="content-wrapper">
-                <div className="padding-lr-10">
-                    <img src={require('../../images/sunghyun_ahn.jpg')} className="data-width-12" alt=""/>
-                </div>
+            <div className="padding-lr-10">
+                <img 
+                    src={require('../../images/sunghyun_ahn.jpg')} 
+                    style={{ '--data-width': '12' } as React.CSSProperties} 
+                    className="responsive-image" 
+                    alt=""
+                />
             </div>
-            <div className="padding-lr-10 data-width-1-5">
             </div>
-            <div className="aboutme padding-lr-10 data-width-6-dot-1">
-                <span className="padding-t-5-b-15 font-about-me">
-                    As a South Korean international student, a University of Washington graduate 『B.S in Physiology』, and an adventurous Seattlite, I consider myself an optimist, a global leader, and an explorer.
-                </span>
-                <span className="padding-tb-30 font-about-me">
+            <div className="padding-lr-20 data-width-1-5">
+            </div>
+            <div className="aboutme padding-lr-10">
+                <span className="font-about-me">
+                    1. Current Seattle University graduate student in 『M.S in Data Science』
+                    <br></br>
+                    2. A University of Washington alumni 『B.S in Physiology』
+                    <br></br>
+                    3. As a South Korean international
+                    <br></br>
+                    4. An adventurous Seattlite
+                    <br></br>
+                    <br></br>
+                    <span className="span-color"> I consider myself a puzzle solver, an optimist, and a global leader.</span>
+                    <br></br>
+                    <br></br>
                     I thrive in ambiguity, learning, developing,
                     and executing on facinating ideas.
                     I've worked for consulting organizations,
                     data science / AI, and start-up projects and
                     realized that curiosity is one of the most
-                    powerful mindset at your disposal. 
+                    powerful mindset at your disposal.                 
+                    <br></br>
+                    <br></br>
+                    So, that is why I ask myself the What's, the Why's, and the How's everyday. 
+                    It's like caffeine for me. The curiosity keeps the drive alive. So here you go.
                 </span>
-                <div className="padding-tb-30 ">
-                    <span className="font-about-me">
-                        So, that is why I ask myself the What's, the Why's, and the How's everyday. 
-                        It's like caffeine for me. The curiosity keeps the drive alive. So here you go.
-                    </span>
-                </div>
             </div>
         </section>
     )
@@ -106,6 +118,7 @@ export const AboutPage = () => {
                     <div className="navbar">
                         <NavigationBar 
                             colorHome={"rgb(255, 255, 255)"}
+                            colorProjects={"rgb(255, 255, 255)"}
                             colorAbout={"rgb(183, 165, 122)"}
                             colorExperience={"rgb(255, 255, 255)"}
                         />

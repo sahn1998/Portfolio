@@ -15,11 +15,15 @@
     "@types/react-leaflet": "^3.0.0",
     "axios": "^1.4.0",
     "csvtojson": "^2.0.10",
+    "d3": "^7.9.0",
     "dotenv": "^16.0.3",
+    "katex": "^0.16.14",
     "leaflet": "^1.9.4",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
+    "react-d3-library": "^1.1.8",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-katex": "^3.0.1",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.11.1",
     "react-scripts": "^5.0.1",
@@ -51,6 +55,8 @@
     ]
   },
   "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/react-katex": "^3.0.4",
     "json-loader": "^0.5.7"
   }
 }
