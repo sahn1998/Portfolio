@@ -4,6 +4,7 @@ import './Navbar.css'
 
 export interface Props {
     colorHome?: string;
+    colorProjects?: string;
     colorAbout?: string;
     colorExperience?: string;
 }
@@ -25,6 +26,13 @@ export const NavigationBar = (props: Props) => {
                                 color: props.colorHome
                             }}>
                                 HOME
+                            </a>
+                        </div>
+                        <div className="links">
+                            <a href={'/interactive-projects'} style={{
+                                color: props.colorProjects
+                            }}>
+                                PROJECTS
                             </a>
                         </div>
                         <div className="links">

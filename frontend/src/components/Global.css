@@ -1,10 +1,12 @@
-/* Global styles*/
+/* Global Styles */
+/* Typography */
 body {
     margin: 0;
     font-family: 'Titillium Web', sans-serif;
-    background-color: rgb(29, 29, 29)
+    background-color: rgb(29, 29, 29);
 }
 
+/* Layout Containers */
 .container {
     position: absolute;
     width: 100%;
@@ -12,24 +14,30 @@ body {
     top: 0;
     left: 0;
 }
-
 .content {
     max-width: 1210px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
 }
-
 .content-wrapper {
     position: relative;
     width: 100%;
 }
 
+/* Flexbox Utility Classes */
 .row {
     display: flex;
     flex-direction: row;
 }
 
-/* Fixing Navigation Bar */
+.column-cen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centers text if it's multiline */
+}
+
+/* Navbar */
 .navbar {
     background-color: rgb(29, 29, 29);
     position: fixed;
@@ -44,124 +52,99 @@ body {
     position: absolute;
 }
 
-/* Sections styles */
+/* Sections */
 .sections {
     margin-top: 86px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
-.data-width-12 {
-    width: calc(100% / 12 * 12);
-    max-width: calc(100% / 12 * 12);
+/* Sections */
+.sections-2 {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+/* Responsive Grid System */
+[data-width] {
     flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 12);
+    max-width: calc(100% / 12 * var(--data-width));
+    width: calc(100% / 12 * var(--data-width));
 }
 
-.data-width-9 {
-    width: calc(100% / 12 * 9);
-    max-width: calc(100% / 12 * 9);
+/* Responsive Grid System */
+img[style*="--data-width"] {
     flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 9);
+    max-width: calc(100% / 12 * var(--data-width));
+    width: calc(100% / 12 * var(--data-width));
 }
 
-.data-width-6-dot-1 {
-    width: calc(100% / 12 * 6.02);
-    max-width: calc(100% / 12 * 6.02);
-    flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 6.02);
-}
-
-.data-width-6 {
-    width: calc(100% / 12 * 6);
-    max-width: calc(100% / 12 * 6);
-    flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 6);
-}
-
-.data-width-5 {
-    width: calc(100% / 12 * 5);
-    max-width: calc(100% / 12 * 5);
-    flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 5);
-}
-
-.data-width-4 {
-    width: calc(100% / 12 * 4);
-    max-width: calc(100% / 12 * 4);
-    flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 4);
-}
-
-.data-width-3 {
-    width: calc(100% / 12 * 3);
-    max-width: calc(100% / 12 * 3);
-    flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 3);
-}
-
-.data-width-2 {
-    width: calc(100% / 12 * 2);
-    max-width: calc(100% / 12 * 2);
-    flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 2);
-}
-
+/* Specific width classes */
 .data-width-1-5 {
-    width: calc(100% / 12 * 1.5);
     max-width: calc(100% / 12 * 1.5);
-    flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 1.5);
+    width: calc(100% / 12 * 1.5);
 }
 
-.data-width-1 {
-    width: calc(100% / 12 * 1);
-    max-width: calc(100% / 12 * 1);
-    flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 1);
+/* Specific width classes */
+.data-width-3 {
+    max-width: calc(100% / 12 * 3);
+    width: calc(100% / 12 * 3);
 }
 
-.data-width-0-5 {
-    width: calc(100% / 12 * 0.5);
-    max-width: calc(100% / 12 * 0.5);
-    flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 0.5);
+/* Specific width classes */
+.data-width-4 {
+    max-width: calc(100% / 12 * 4);
+    width: calc(100% / 12 * 4);
 }
 
-.padding-lr-0-5 {
-    padding-left: calc(100% / 12 * 0.5);
-    padding-right: calc(100% / 12 * 0.5);
+/* Specific width classes */
+.data-width-6-dot-1 {
+    max-width: calc(100% / 12 * 6.1);
+    width: calc(100% / 12 * 6.1);
 }
 
-.padding-lr-3 {
-    padding-left: 3px;
-    padding-right: 3px;
+/* Specific width classes */
+.data-width-12 {
+    max-width: calc(100% / 12 * 12);
+    width: calc(100% / 12 * 12);
 }
 
-.padding-lr-10 {
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
-.padding-tb-15 {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
 
-.padding-tb-30 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+/* Padding Utilities */
+.padding {
+    &-lr-0-5 {
+        padding-left: calc(100% / 12 * 0.5);
+        padding-right: calc(100% / 12 * 0.5);
+    }
+    &-lr-3 {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    &-lr-10 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &-lr-20 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &-tb-15 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    &-tb-30 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 .padding-t-30 {
     padding-top: 30px;
 }
-
 .padding-t-5-b-15 {
     padding-top: 5px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
-
 .padding-b-40 {
-    padding-bottom: 40px
+    padding-bottom: 40px;
 }
