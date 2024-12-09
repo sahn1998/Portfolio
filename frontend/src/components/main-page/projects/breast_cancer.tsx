@@ -29,7 +29,7 @@ export const BreastCancerProject = () => {
                 <p className="project-description">
                     <span className="description">
                     In developing countries, women might not have access to a mammogram or may not be able to afford it.
-                    Ultrasound is the cheaper option and we trained a computer vision model that detects breast cancer from ultrasound images
+                    Ultrasound is the cheaper option and we trained a computer vision model that detects breast cancer from ultrasound images.
                     </span>
                 </p>
             </div>
