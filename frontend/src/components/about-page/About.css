@@ -67,7 +67,7 @@
 }
 
 .highlight {
-    color: var(--main-highlight-color);
+    color: var(--highlight-color);
     font-weight: 500;
 }
 
