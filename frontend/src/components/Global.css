@@ -1,7 +1,29 @@
 /* Global Styles */
 /* Typography */
 html {
-    overflow-y: scroll; /* Ensures a consistent scrollbar */
+    overflow-y: auto; /* Allow vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+/* Global Variables */
+:root {
+    --title-font-family: 'Titillium_Web variant10', Tofu;
+    --font-family-regular: ".titillium-web-regular", sans-serif;
+    --font-family-light: ".titillium-web-light", sans-serif;
+    --background-color: #101720;
+    --title-color: #d8d8d8ff;
+    --reg-text-color: #bdc3c7;
+    --main-highlight-color: #91bdd1;
+    --highlight-color: rgb(183, 165, 122);
+    --font-size-base: 1rem;
+    --font-size-large: 1.25rem;
+    --line-height-base: 1.5;
+    --line-height-large: 2;
 }
 
 body {

@@ -52,12 +52,13 @@
     font-weight: 400;
     font-size: 1rem;
     color: white;
-    text-decoration: none;
     transition: color 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none;
 }
 
 .links-wrapper a:hover {
-    color: rgb(183, 165, 122); /* Changes color on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+    text-decoration: underline; /* Ensures underline doesn't reappear on hover */
 }
 
 /* Social Media Logos */
