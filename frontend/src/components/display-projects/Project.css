@@ -1,0 +1,115 @@
+/* General Styles for Each Project */
+.project {
+    width: 100%; /* Ensures the project fills the container */
+    max-width: 100%; /* Prevents any overflow */
+    display: flex;
+    flex-direction: column;
+    background-color: #101720; /* Optional: Add background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Project Image */
+.project-image {
+    width: 100%; /* Ensures the image spans the full width of the project container */
+    height: 300px; /* Fixed height for uniformity */
+    /*object-fit: cover;  Maintains the aspect ratio, cropping if necessary */
+    border-radius: 10px; /* Matches the card’s rounded corners */
+    transition: filter 0.3s ease;
+    margin-bottom: 10px; /* Adds spacing between image and text */
+}
+
+.project-image:hover {
+    filter: brightness(80%); /* Darkens the image slightly on hover */
+}
+
+/******************************************************/
+
+/* Section Containers */
+.project-text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensures the sections fill the card space evenly */
+}
+
+/* Date Section */
+.date-title {
+    height: 40px; /* Fixed height for uniformity */
+    font-family: "Titillium Web", sans-serif;
+    letter-spacing: 0.1rem;
+    color: #91bdd1; /* Muted color for the date */
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+/* Title Section */
+.project-title {
+    margin-top: 0;
+    height: 50px; /* Allows the height to adjust dynamically to the content */
+    color: #d8d8d8;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Titillium_Web variant10', Tofu;   /* Correctly reference the font family */
+    letter-spacing: 0.1rem;
+    margin-bottom: 25px;
+    text-align: left;
+    white-space: normal; /* Allows text to wrap */
+    line-height: 1.3; /* Improves readability */
+}
+
+/* Description Section */
+.project-description {
+    height: 100px; /* Fixed height for uniformity */
+    color: #bdc3c7;
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.5; /* Improves readability */
+    text-align: left;
+    overflow: hidden; /* Ensures text doesn't overflow the section */
+    text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+    overflow: visible; /* Ensures the text is fully visible */
+    text-overflow: clip; /* No ellipsis, text continues normally */
+    white-space: normal; /* Allows text to wrap to the next line */
+}
+
+/* Responsive Design (Optional) */
+
+/* Medium Screens (Tablets and Smaller Desktops) */
+@media (max-width: 1024px) {
+    .project {
+        padding: 10px; /* Reduces padding for medium screens */
+    }
+
+    .project-image {
+        height: 250px; /* Adjusts image height for medium screens */
+    }
+
+    .project-title {
+        font-size: 1.4rem; /* Slightly smaller title size */
+    }
+
+    .project-description {
+        font-size: 0.95rem; /* Slightly smaller description size */
+    }
+}
+
+/* Small Screens (Mobile Devices) */
+@media (max-width: 768px) {
+    .project {
+        padding: 8px; /* Further reduces padding for smaller screens */
+    }
+
+    .project-image {
+        height: 200px; /* Adjusts image height for smaller screens */
+    }
+
+    .project-title {
+        font-size: 1.3rem; /* Adjusts title size for smaller screens */
+    }
+
+    .project-description {
+        font-size: 0.9rem; /* Adjusts description size for smaller screens */
+    }
+}

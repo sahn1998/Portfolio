@@ -1,150 +1,34 @@
 /* Global Styles */
 /* Typography */
+html {
+    overflow-y: auto; /* Allow vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+/* Global Variables */
+:root {
+    --title-font-family: 'Titillium_Web variant10', Tofu;
+    --font-family-regular: ".titillium-web-regular", sans-serif;
+    --font-family-light: ".titillium-web-light", sans-serif;
+    --background-color: #101720;
+    --title-color: #d8d8d8ff;
+    --reg-text-color: #bdc3c7;
+    --main-highlight-color: #91bdd1;
+    --highlight-color: rgb(183, 165, 122);
+    --font-size-base: 1rem;
+    --font-size-large: 1.25rem;
+    --line-height-base: 1.5;
+    --line-height-large: 2;
+}
+
 body {
     margin: 0;
-    font-family: 'Titillium Web', sans-serif;
-    background-color: rgb(29, 29, 29);
-}
-
-/* Layout Containers */
-.container {
-    position: absolute;
-    width: 100%;
-    min-height: 100%;
-    top: 0;
-    left: 0;
-}
-.content {
-    max-width: 1210px;
-    margin: 0 auto;
-}
-.content-wrapper {
-    position: relative;
-    width: 100%;
-}
-
-/* Flexbox Utility Classes */
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-.column-cen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Centers text if it's multiline */
-}
-
-/* Navbar */
-.navbar {
-    background-color: rgb(29, 29, 29);
-    position: fixed;
-    width: 100%;
-    z-index: 150;
-}
-
-/* Overlay */
-.overlay {
-    width: 100%;
-    min-height: 100%;
-    position: absolute;
-}
-
-/* Sections */
-.sections {
-    margin-top: 86px;
-    overflow: hidden;
-}
-
-/* Sections */
-.sections-2 {
-    margin-top: 30px;
-    overflow: hidden;
-}
-
-/* Responsive Grid System */
-[data-width] {
-    flex: 0 0 auto;
-    max-width: calc(100% / 12 * var(--data-width));
-    width: calc(100% / 12 * var(--data-width));
-}
-
-/* Responsive Grid System */
-img[style*="--data-width"] {
-    flex: 0 0 auto;
-    max-width: calc(100% / 12 * var(--data-width));
-    width: calc(100% / 12 * var(--data-width));
-}
-
-/* Specific width classes */
-.data-width-1-5 {
-    max-width: calc(100% / 12 * 1.5);
-    width: calc(100% / 12 * 1.5);
-}
-
-/* Specific width classes */
-.data-width-3 {
-    max-width: calc(100% / 12 * 3);
-    width: calc(100% / 12 * 3);
-}
-
-/* Specific width classes */
-.data-width-4 {
-    max-width: calc(100% / 12 * 4);
-    width: calc(100% / 12 * 4);
-}
-
-/* Specific width classes */
-.data-width-6-dot-1 {
-    max-width: calc(100% / 12 * 6.1);
-    width: calc(100% / 12 * 6.1);
-}
-
-/* Specific width classes */
-.data-width-12 {
-    max-width: calc(100% / 12 * 12);
-    width: calc(100% / 12 * 12);
-}
-
-
-
-/* Padding Utilities */
-.padding {
-    &-lr-0-5 {
-        padding-left: calc(100% / 12 * 0.5);
-        padding-right: calc(100% / 12 * 0.5);
-    }
-    &-lr-3 {
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-    &-lr-10 {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    &-lr-20 {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    &-tb-15 {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    &-tb-30 {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-}
-
-.padding-t-30 {
-    padding-top: 30px;
-}
-.padding-t-5-b-15 {
-    padding-top: 5px;
-    padding-bottom: 15px;
-}
-.padding-b-40 {
-    padding-bottom: 40px;
+    font-family: "Titillium Web", sans-serif;
+    background-color:#101720;
+    color: #bdc3c7;
 }

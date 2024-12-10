@@ -1,68 +1,90 @@
-/* Global styles */
-.content {
-    max-width: 1210px;
-    margin-right: auto;
-    margin-left: auto;
+/* Navigation Bar Styles */
+#navbar {
+    position: fixed; /* Keeps the navbar fixed at the top */
+    top: 0; /* Aligns it to the top of the viewport */
+    left: 0; /* Aligns it to the left of the viewport */
+    width: 100%; /* Stretches it across the full width */
+    background-color: #101720; /* Background color */
+    z-index: 1000; /* Ensures it stays above other content */
+    padding: 1rem 0; /* Adds vertical padding */
 }
 
+/* Wrapper Styles */
 .nav-content-wrapper {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Pushes content to the ends */
+    max-width: 1600px; /* Centers the navbar content */
+    margin: 0 auto;
+    padding: 0 1rem; /* Adds horizontal padding */
 }
 
-a:link { 
-    text-decoration-line: none;
+/* Logo Styles */
+.hyun-logo {
+    display: flex;
+    align-items: center;
 }
 
-a:visited {
-    text-decoration-line: none;
-    color: white;
-}
-
-a:hover {
-    text-decoration-line: none;
-    color: rgb(183, 165, 122);
-}
-
-a:active {
-    text-decoration-line: none;
-}
-
-/* Navigation Bar styles */
 .hyun-logo img {
+    height: 60px; /* Adjusted for better alignment */
     width: auto;
-    height: 86px;
+}
+
+/* Links and Logos Wrapper */
+.links-container {
+    display: flex;
+    align-items: right;
+}
+
+.links-wrapper,
+.link-logos {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Adds spacing between links and icons */
 }
 
 .links-wrapper {
-    display: flex;
-    padding-left: calc(100% / 12 * 6.6);;
-    align-items: center;
+    margin-right: 2rem; /* Adds spacing between links and logos */
 }
 
-.links {
-    padding-right: 2rem;
-    font-family: "Titillium_Web variant0", Tofu;
+.links-wrapper a {
+    font-family: "Titillium_Web variant0", sans-serif;
     font-weight: 400;
-    font-style: normal;
+    font-size: 1rem;
+    color: white;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none;
 }
 
-.link-logos {
-    display: flex;
-    flex-direction: row;
+.links-wrapper a:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    text-decoration: underline; /* Ensures underline doesn't reappear on hover */
 }
 
-.link-logo {
-    padding-right: 1.5rem;
-}
-
-.link-logo a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.link-logo img {
+/* Social Media Logos */
+.link-logos img {
+    height: 26px; /* Consistent height for icons */
     width: auto;
-    height: 26px;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.link-logos img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-content-wrapper {
+        flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    }
+
+    .links-wrapper,
+    .link-logos {
+        justify-content: flex-end; /* Keeps them aligned to the right */
+        margin-top: 0.5rem;
+    }
+
+    .links-wrapper a {
+        font-size: 0.9rem; /* Slightly smaller font size for smaller screens */
+    }
 }

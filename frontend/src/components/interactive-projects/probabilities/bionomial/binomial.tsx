@@ -95,7 +95,7 @@ export const BinomialDistributionPage: React.FC = () => {
 											value={testSliderValue}
 											onValueChange={settestSliderValue}
 											appearance={{
-												background: "linear-gradient(to right, #f06, #ff9900)",
+												background: "linear-gradient(to right, #E4EfE9, #93A5CF)",
 											}}
 										/>
 										<span>
@@ -113,7 +113,7 @@ export const BinomialDistributionPage: React.FC = () => {
 											value={probabilitySliderValue}
 											onValueChange={setProbabilitySliderValue}
 											appearance={{
-												background: "linear-gradient(to right, #f06, #ff9900)",
+												background: "linear-gradient(to right, #E4EfE9, #93A5CF)",
 											}}
 										/>
 										<span>
@@ -131,7 +131,7 @@ export const BinomialDistributionPage: React.FC = () => {
 											value={trialSliderValue}
 											onValueChange={setTrialSliderValue}
 											appearance={{
-												background: "linear-gradient(to right, #f06, #ff9900)",
+												background: "linear-gradient(to right, #E4EfE9, #93A5CF)",
 											}}
 										/>
 										<span>
@@ -139,8 +139,11 @@ export const BinomialDistributionPage: React.FC = () => {
 										</span>
 									</div>
 								</div>
+								<br></br>
+								<br></br>
+								<br></br>
 								<div className="main-page-intro">
-									<span style={{ color: 'white', fontSize: '20px', marginTop: '20px'}}>
+									<span style={{ color: '#acbcd7ff', fontSize: '20px', marginTop: '20px'}}>
 										Play around with the sliders!
 										<li style={{ marginTop: '5px'}}>
 											p: You can see how the distribution shifts and centers around the most plausible success rate. (Expectation)
@@ -163,14 +166,15 @@ export const BinomialDistributionPage: React.FC = () => {
 										<br></br>
 										<br></br>
 										Assume the true success rate of producing a defective Tesla is 50% (p = 0.5).
-										You test {testSliderValue} cars in a batch <span style={{ color: 'white' }}>(change the numbers around on the slider!)</span> and calculate the probability of observing exactly 30 defective cars.
+										You test {testSliderValue} cars in a batch <span style={{ color: '#acbcd7ff' }}>(change the numbers around on the slider!)</span> and calculate the probability of observing exactly 30 defective cars.
 										This is denoted as P(data | success rate), which represents the probability of observing the data given the success rate.
 										<br></br>
 										<br></br>
-										<span style={{ color: 'white' }}>In short, we want to know the likelihood of observing 30 defective Teslas given "p" and "𝑛".</span>
+										<span style={{ color: '#acbcd7ff' }}>In short, we want to know the likelihood of observing 30 defective Teslas given "p" and "𝑛".</span>
 									</span>
 								</div>
-
+								<br></br>
+								<br></br>
 								<div className="main-page-intro">
 									<h4>
 										3. Understanding the Binomial Distribution
@@ -213,13 +217,14 @@ export const BinomialDistributionPage: React.FC = () => {
 											value={findingSliderValue}
 											onValueChange={setFindingSliderValue}
 											appearance={{
-												background: "linear-gradient(to right, #f06, #ff9900)",
+												background: "linear-gradient(to right, #E4EfE9, #93A5CF)",
 											}}
 										/>
 									</div>
 								</div>
+								<br></br>
 								<div className="main-page-intro">
-									<span style={{ color: 'white', fontSize: '20px', marginTop: '20px'}}>
+									<span style={{ color: '#acbcd7ff', fontSize: '20px', marginTop: '20px'}}>
 										Since we say p = {probabilitySliderValue}, it means on average we expect to {Math.round(probabilitySliderValue * testSliderValue)} defective Teslas out of {testSliderValue} Teslas.
 										By adjusting the slider, you can see the probability of seeing {findingSliderValue} defective cars is highlighted by the bar given our "p" and "𝑛".
 										<br></br>
@@ -234,13 +239,15 @@ export const BinomialDistributionPage: React.FC = () => {
 										5. From Data to Success Rate
 									</h4>
 									<span>
-									In most real-world scenarios, we don’t know the exact success rate (p). <span style={{ color: 'white' }}>Instead, we work backward to estimate the probability of manufacturing a defective car based on the observed data.</span> This involves calculating 
+									In most real-world scenarios, we don’t know the exact success rate (p). <span style={{ color: '#acbcd7ff' }}>Instead, we work backward to estimate the probability of manufacturing a defective car based on the observed data.</span> This involves calculating 
 									P(success rate ∣ data), the probability of a success rate given the observed outcomes. This is different than P(data | success rate), probability of observing the data given the success rate. Similiar in wording, but massively different. 
 									<br></br>
 									<br></br>
 									For this, you'll need to know the concept of Bayes Theorem and the Probability Density Functions.
 									</span>
 								</div>
+								<br></br>
+								<br></br>
 								<div className="main-page-intro">
 									<h4>
 										6. Answering the question
@@ -251,11 +258,11 @@ export const BinomialDistributionPage: React.FC = () => {
 									<br></br>
 									We can use our formula here, with a defect probability p = (2/50) (though very computationally expensive):
 									</span>
+									<br></br>
 									<img src={binomialPMF} alt="Example" />
 									<br></br>
-									<br></br>
-									<span style={{ color: 'white', textAlign: 'center', marginTop: '20px'}}>
-									Note* Generally for a large 𝑛, we approximate it using the normal distribution.
+									<span style={{ color: '#acbcd7ff', textAlign: 'center', marginTop: '20px'}}>
+									*Note: Generally for a large 𝑛, we approximate it using the normal distribution.
 									</span>
 									<br></br>
 									<br></br>

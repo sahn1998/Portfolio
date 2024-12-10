@@ -1,0 +1,112 @@
+/* Color Scheme */
+/*
+background-color:#101720;
+color: #d8d8d8ff;
+color: #bdc3c7;
+*/
+
+
+/* Text Scheme */
+/* 
+font-family: "Titillium Web", sans-serif;
+width: 1210px;
+letter-spacing: 0.3rem;
+font-size: 20px;
+color: #d8d8d8ff;
+font-weight: 500;
+margin-bottom: 5px;
+padding-bottom: 5px;
+text-transform: capitalize;
+text-align: left;
+position: relative;
+
+font-family: "Titillium Web", sans-serif;
+width: 1210px;
+letter-spacing: 0.1rem;
+font-size: 30px;
+color: #d8d8d8ff;
+font-weight: 600;
+margin-top: 10px;
+margin-bottom: 5px;
+padding-bottom: 5px;
+text-transform: capitalize;
+text-align: left;
+position: relative;
+
+*/
+
+/* Introduction Section */
+#intro {
+    text-align: center;
+}
+
+#intro h1 {
+    font-family: "Titillium Web", sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 4rem;
+    color: #d8d8d8ff;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+}
+
+#intro p {
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-family: "titillium-web-light", sans-serif;
+    line-height: 1.5; /* Improves readability */
+    margin: 0;
+    color: #bdc3c7;
+}
+
+/* Portfolio Grid */
+#portfolio {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; /* Stack each section vertically */
+    gap: 2rem; /* Add spacing between sections */
+    align-items: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures exactly 3 columns per row */
+    gap: 1.5rem; /* Spacing between cards */
+    width: 100%;
+    max-width: 1600px; /* Limits the grid's width for consistent layout */
+}
+
+/* Portfolio Card */
+.portfolio-card {
+    background-color: #101720;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.portfolio-card:hover {
+    box-shadow: 0 8px 16px rgba(187, 187, 187, 0.7);
+}
+
+.portfolio-card h3 {
+    font-size: 1.5rem;
+    color: #ffa500;
+}
+
+/* Navbar Placeholder (Import Navbar CSS Separately) */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* 1 column per row on smaller screens */
+    }
+}

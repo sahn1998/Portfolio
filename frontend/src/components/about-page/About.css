@@ -1,90 +1,105 @@
-/* About Page Global styles */
-
-/* Section 1 styles */
-#aboutme-intro {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 5.5rem;
-}
-
-.introduction {
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.introduction h1 {
-    display: flex;
-    flex-direction: column;
-    letter-spacing: .2rem;
-    font-size: 2.55555rem;
-    line-height: 3.55556rem;
-}
-
-.introduction h1 span {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family: "Titillium_Web variant0", Tofu;
-    font-weight: 500;
-    font-style: normal;
-    color: rgb(233, 233, 233);
-}
-
-/* Section 2 styles */
-
-#aboutme-main {
-    display: flex;
-    flex-direction: row;
-    word-wrap: break-word;
-    position: relative;
-    margin-bottom: 3.5 rem;
-}
-
-.section2 img {
-    height: auto;
-    border-radius: 0.5rem;
-    box-shadow: rgba(201, 201, 201, 0.24) 0px 3px 8px;
-}
-
-.aboutme {
+/* About Page Layout */
+#about-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
+    align-items: center;
+    margin-top: 7rem;
 }
 
-.data-width-0-8 {
-    width: calc(100% / 12 * 0.8);
-    max-width: calc(100% / 12 * 0.8);
-    flex: 0 0 auto;
-    flex-basis: calc(100% / 12 * 0.8);
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Add spacing between sections */
+    width: 100%;
+    max-width: 1600px
 }
 
+/* Introduction Section */
+#aboutme-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
 
-.font-about-me {
-    color: rgb(233, 233, 233);;
-    font-size: 1.25rem;
-    line-height: 2.33rem;
-    font-family: "Titillium_Web variant0", Tofu;
+.introduction h1 {
+    font-family: var(--title-font-family);
     font-weight: 400;
-    font-style: normal;
+    font-size: 2.5rem;
+    color: var(--title-color);
+    letter-spacing: 0.1rem;
 }
 
-#aboutme-content {
+.introduction h1 span {
+    display: block;
+}
+
+/* About Me Section */
+#aboutme-main {
     display: flex;
     flex-direction: row;
-    word-wrap: break-word;
-    position: relative;
-    margin-top: 5.5rem;
-    margin-bottom : 5.5rem;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.span-color {
-    color: rgb(183, 165, 122);
+.image-container img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 0.5rem;
+}
+
+.about-text {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.font-about-me {
+    font-family: var(--font-family-light);
+    color: var(--reg-text-color);
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
+    margin: 0;
+}
+
+.highlight {
+    color: var(--highlight-color);
+    font-weight: 500;
+}
+
+/* What, Why, How Section */
+#aboutme-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.section-content .row {
+    display: flex;
+    flex-direction: column;
+    color: var(--reg-text-color);
+    margin-bottom: 1rem;
+}
+
+.question {
+    font-weight: 600;
+    font-size: var(--font-size-large);
+    color: var(--highlight-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #aboutme-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
 }
