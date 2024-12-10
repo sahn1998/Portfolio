@@ -39,7 +39,7 @@ export const SimpleSlider: React.FC<SliderProps> = ({
           appearance: "none",
           width: `${width}px`,
           height: `${height}px`,
-          background: "linear-gradient(to right, #4caf50, #2196f3)",
+          background: "linear-gradient(to right, #ee9ca7 , #ffdde1)",
           borderRadius: "5px",
           outline: "none",
           cursor: "pointer",

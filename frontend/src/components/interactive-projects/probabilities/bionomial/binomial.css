@@ -3,7 +3,7 @@
     flex-direction: column;
     position: relative;
     width: 100%;
-    background-color: rgb(29, 29, 29);
+    background-color:#101720;
     color: white;
     margin-bottom: 3rem;
 }
@@ -27,7 +27,7 @@
     font-family: "Titillium_Web variant0", Tofu;
     letter-spacing: .3rem;
     font-size: 56px;
-    color: white;
+    color: #d8d8d8ff;
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: capitalize;
@@ -38,7 +38,7 @@
     width: 1210px;
     letter-spacing: 0.15rem;
     font-size: 30px;
-    color: white;
+    color: #d8d8d8ff;
     font-weight: 500;
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -52,7 +52,7 @@
     width: 1210px;
     letter-spacing: 0.1rem;
     font-size: 30px;
-    color: white;
+    color: #d8d8d8ff;
     font-weight: 600;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -67,7 +67,7 @@
     width: 1210px;
     letter-spacing: 0.3rem;
     font-size: 20px;
-    color: white;
+    color: #d8d8d8ff;
     font-weight: 500;
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -79,7 +79,7 @@
 .main-page-intro h6 {
     font-family: "Titillium Web", sans-serif;
     font-size: 20px;
-    color: white;
+    color: #d8d8d8ff;
 }
 
 
@@ -87,7 +87,7 @@
     font-family: 'Titillium Web', sans-serif;
     width: 1210px;
     font-size: 20px;
-    color: rgb(183, 165, 122);
+    color: #bdc3c7;
     line-height: 26px;
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -100,7 +100,7 @@
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
-    color: rgb(183, 165, 122);
+    color: #bdc3c7;
     font-size: 20px;
   }
   

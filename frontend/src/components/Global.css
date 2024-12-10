@@ -3,7 +3,7 @@
 body {
     margin: 0;
     font-family: 'Titillium Web', sans-serif;
-    background-color: rgb(29, 29, 29);
+    background-color: #101720;
 }
 
 /* Layout Containers */
@@ -39,7 +39,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: rgb(29, 29, 29);
+    background-color: #101720;
     position: fixed;
     width: 100%;
     z-index: 150;

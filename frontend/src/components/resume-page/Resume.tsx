@@ -61,7 +61,7 @@ const ChemtopiaExperience = () => {
                                     <div className="image-description-wrapper">
                                         <div className="image-description">
                                             <span>
-                                                ● Optimized regulatory document creation workows, increasing efciency by 100% through big data preprocessing
+                                                ● Optimized regulatory document creation workows, increasing efficiency by 100% through big data preprocessing
                                                 and analysis using Python (NumPy, Pandas) and Excel (VLOOKUPs, VBA).
                                             </span>
                                             <span>
@@ -69,7 +69,7 @@ const ChemtopiaExperience = () => {
                                                 developing interactive dashboards to provide insights for top petrochemical stakeholders.
                                             </span>
                                             <span>
-                                                ● Enhanced team efciency by over 70% through improving data collection, querying, and sorting
+                                                ● Enhanced team efficiency by over 70% through improving data collection, querying, and sorting
                                                 processes for chemical substance management using python and SQL.
                                             </span>
                                             <span>

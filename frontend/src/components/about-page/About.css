@@ -33,7 +33,7 @@
     font-family: "Titillium_Web variant0", Tofu;
     font-weight: 500;
     font-style: normal;
-    color: rgb(233, 233, 233);
+    color: #bdc3c7
 }
 
 /* Section 2 styles */
@@ -56,7 +56,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
+    color:#d8d8d8ff;
 }
 
 .data-width-0-8 {
@@ -68,7 +68,7 @@
 
 
 .font-about-me {
-    color: rgb(233, 233, 233);;
+    color:#d8d8d8ff;
     font-size: 1.25rem;
     line-height: 2.33rem;
     font-family: "Titillium_Web variant0", Tofu;

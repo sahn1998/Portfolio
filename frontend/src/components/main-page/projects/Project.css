@@ -33,7 +33,7 @@
 }
 
 .project-title {
-    color: white;
+    color: #d8d8d8ff;
     font-size: 25px;
     font-weight: 700;
     font-family: 'Titillium_Web variant10', Tofu;
@@ -44,6 +44,6 @@
 }
 
 .project-description {
-    color: white;
+    color: #bdc3c7;
     font-family: 'Titillium Web', sans-serif;
 }
