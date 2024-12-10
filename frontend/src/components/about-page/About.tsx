@@ -2,8 +2,6 @@
 import React from 'react';
 import { NavigationBar } from '../navigation-bar/Navbar';
 import './About.css'
-import '../Global.css'
-
 const Introduction = () => {
     return (
         <section id="aboutme-intro" className="content">

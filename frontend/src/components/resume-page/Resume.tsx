@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavigationBar } from '../navigation-bar/Navbar';
-import '../Global.css'
 import './Resume.css'
 
 const ExperienceHeader = () => {

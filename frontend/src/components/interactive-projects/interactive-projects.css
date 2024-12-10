@@ -37,16 +37,15 @@ position: relative;
 
 /* Introduction Section */
 #intro {
-    margin-top: 7rem;
     text-align: center;
 }
 
 #intro h1 {
-    font-family: 'Titillium_Web variant10', Tofu;
-    font-weight: 400;
+    font-family: "Titillium Web", sans-serif;
+    letter-spacing: 0.1rem;
     font-size: 4rem;
     color: #d8d8d8ff;
-    letter-spacing: 0.1rem;
+    font-weight: 500;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
