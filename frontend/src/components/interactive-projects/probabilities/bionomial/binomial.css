@@ -8,12 +8,17 @@
     margin-bottom: 3rem;
 }
 
-.coin-page.sections {
-    margin-top: 10px;
+.overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.coin-page .content {
-    max-width: 1210px;
+.overlay .sections {
+    margin-top: 7rem;
+    width: 100%;
+    max-width: 1600px
 }
 
 .main-page-intro {
@@ -24,12 +29,12 @@
 }
 
 .main-page-intro h1 {
-    font-family: "Titillium_Web variant0", Tofu;
+    font-family: var(--title-font-family);
     letter-spacing: .3rem;
     font-size: 56px;
-    color: #d8d8d8ff;
-    font-weight: 700;
-    margin-bottom: 20px;
+    color: var(--title-color);
+    font-weight: 600;
+    margin-bottom: 2rem;
     text-transform: capitalize;
 }
 
@@ -38,7 +43,7 @@
     width: 1210px;
     letter-spacing: 0.15rem;
     font-size: 30px;
-    color: #d8d8d8ff;
+    color: var(--title-color);
     font-weight: 500;
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -52,7 +57,7 @@
     width: 1210px;
     letter-spacing: 0.1rem;
     font-size: 30px;
-    color: #d8d8d8ff;
+    color: var(--title-color);
     font-weight: 600;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -67,7 +72,7 @@
     width: 1210px;
     letter-spacing: 0.3rem;
     font-size: 20px;
-    color: #d8d8d8ff;
+    color: var(--title-color);
     font-weight: 500;
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -79,7 +84,7 @@
 .main-page-intro h6 {
     font-family: "Titillium Web", sans-serif;
     font-size: 20px;
-    color: #d8d8d8ff;
+    color: var(--title-color);
 }
 
 
@@ -87,7 +92,7 @@
     font-family: 'Titillium Web', sans-serif;
     width: 1210px;
     font-size: 20px;
-    color: #bdc3c7;
+    color: var(--reg-text-color);
     line-height: 26px;
     margin-bottom: 5px;
     padding-bottom: 5px;

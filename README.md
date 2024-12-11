@@ -1,3 +1,3 @@
-# dev_v1
+# dev_v2
 
-Portfolio Version 1
+Collection of my projects! 
