@@ -59,6 +59,18 @@ export const Resume = () => (
         <div className="resume-container">
             <SectionHeader title='Experiences' />
             <ExperienceSection
+                role="Graduate Research Assistant"
+                company="Seattle University."
+                dates="Jan. 2025 - Present"
+                images={[]}
+                details={[
+                    "● Developed an end-to-end machine learning pipeline for asthma health risk prediction, integrating clinical and environmental features in collaboration with Soonchunhyang University Medical Center.",
+                    "● Implemented spatial transformation techniques on tabular patient data to enable transfer learning in computer vision frameworks.",
+                    "● Designed and optimized model architecture for ResNet50 and MobileNetV2, improving recall-score by 20%.",
+                    "● Leveraged TensorFlow and PyTorch across Jetstream2 and AWS EC2 cloud platforms for scalable training and evaluation",
+                ]}
+            />
+            <ExperienceSection
                 role="Regulatory & Analytics Consultant"
                 company="Chemtopia Co., Ltd."
                 dates="Aug. 2023 - Aug. 2024"
@@ -67,16 +79,17 @@ export const Resume = () => (
                     require('../../images/sunghyun_ahn_2024.jpg')
                 ]}
                 details={[
-                    "● Optimized regulatory document creation workflows, increasing efficiency by 100% through big data preprocessing and analysis using Python (NumPy, Pandas) and Excel (VLOOKUPs, VBA).",
-                    "● Processed and analyzed EU & Korea’s PFAS contamination data in Python and SQL, developing interactive dashboards to provide insights for top petrochemical stakeholders.",
-                    "● Enhanced team efficiency by over 70% through improving data collection, querying, and sorting processes for chemical substance management using Python and SQL.",
+                    "● Processed 250K+ chemical records using SQL, Python and Excel, flagging PFAS compounds and improving regulatory compliance accuracy by 15%.",
+                    "● Developed +15 dashboards presentations across 10 clients in +50 projects to provide chemical regulatory insights and created reusable templates that cut manual reporting time by 40%.",
+                    "● Detected 30+ data integrity issues in chemical inventory logs, enabling proactive corrections that reduced $100K inchemical export expenditures.",
+                    "● Reduced cross-team (cross-functional) chemical inventory & regulatory data handoff delays by 2x through Excel automation.",
                     "● Directed data-driven compliance strategies for 50+ REACH projects across Korea, EU, Türkiye, UK, and USA.",
                     "● Managed 40+ clients from industries across Petroleum, Petrochemical, Polymer, Specialty Chemicals, and Semiconductors, delivering operational solutions to regulatory compliance."
                 ]}
             />
             <ExperienceSection
-                role="Operations / Language Specialist"
-                company="Republic of Korea Army | 7th Corps HQ"
+                role="Operations Data & Language Specialist (SGT)"
+                company="Republic of Korea Army | 7th Corps HQ - G3"
                 dates="Oct. 2021 - April 2023"
                 images={[
                     require('../../images/sung_ahn_military.jpg'),
@@ -84,9 +97,9 @@ export const Resume = () => (
                     require('../../images/7th_corps.png')
                 ]}
                 details={[
-                    "● Analyzed three years of combat training data to design and implement an advanced training module, enhancing platoon survivability in war game simulations by 30%.",
-                    "● Processed and visualized MILES equipment combat training data using Excel dashboards, uncovering 5 critical areas for performance improvement.",
-                    "● Collaborated with Colonels within the Operations Branch (G3) to streamline data-driven combat decision-making processes, contributing to mission-critical planning and execution."
+                    "● Analyzed 100K+ datapoints from training simulations and improved strategic readiness metrics by 30% through actionable insights",
+                    "● Developed Excel dashboard suite used by 3 brigades, reducing weekly report prep time from 6 to 2 hours.",
+                    "● Supported 10+ U.S. joint missions as a bilingual analyst, enhancing data flow and tactical alignment."
                 ]}
             />
             <ExperienceSection
@@ -118,9 +131,9 @@ export const Resume = () => (
                 ]}
                 details={[
                     "● Designed a 5-stage Project Management Plan (PMP), improving project completion efficiency by 20% and aligning task execution with business objectives.",
-                    "● Conducted A/B testing on customer retention and homepage click-through rates (CTR), leading to a 10% revenue increase within the fiscal year.",
-                    "● Developed a financial management plan by assessing budget constraints, enabling the strategic allocation of $200K for future business investments.",
-                    "● Collaborated with other PMs, department executives, and cross-functional teams to meet various client needs.",
+                    "● Led 3 client projects with a focus on operational analysis, increasing client ROI by an estimated 18% based on post-project KPIs.",
+                    "● Designed and ran A/B tests on website design impacting 5K+ users, identifying optimal features that improved engagement by 5%",
+                    "● Streamlined sprint planning across 5-member team, reducing blockers and boosting task completion rate by 30%.",
                 ]}
             />
         </div>

@@ -4,7 +4,7 @@
     top: 0; /* Aligns it to the top of the viewport */
     left: 0; /* Aligns it to the left of the viewport */
     width: 100%; /* Stretches it across the full width */
-    background-color: #101720; /* Background color */
+    background-color: #131e2c; /* Background color */
     z-index: 1000; /* Ensures it stays above other content */
     padding: 1rem 0; /* Adds vertical padding */
 }
@@ -26,7 +26,7 @@
 }
 
 .hyun-logo img {
-    height: 60px; /* Adjusted for better alignment */
+    height: 3.6rem; /* Adjusted for better alignment */
     width: auto;
 }
 

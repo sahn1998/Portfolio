@@ -1,113 +1,485 @@
-/* Color Scheme */
-/*
-background-color:#101720;
-color: #d8d8d8ff;
-color: #bdc3c7;
-*/
+/* Section Card, not full screen */
+.section-card {
+    width: 100%;
+    max-width: 2100px;         /* keep it nicely contained */
+    min-height: 70vh;          /* card height */
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-/* Text Scheme */
-/* 
-font-family: "Titillium Web", sans-serif;
-width: 1210px;
-letter-spacing: 0.3rem;
-font-size: 20px;
-color: #d8d8d8ff;
-font-weight: 500;
-margin-bottom: 5px;
-padding-bottom: 5px;
-text-transform: capitalize;
-text-align: left;
-position: relative;
+    border-radius: 48px;
+    overflow: hidden;
 
-font-family: "Titillium Web", sans-serif;
-width: 1210px;
-letter-spacing: 0.1rem;
-font-size: 30px;
-color: #d8d8d8ff;
-font-weight: 600;
-margin-top: 10px;
-margin-bottom: 5px;
-padding-bottom: 5px;
-text-transform: capitalize;
-text-align: left;
-position: relative;
-
-*/
-
-/* Introduction Section */
-#intro {
-    margin-top: 7rem;
-    text-align: center;
+    background: none;
 }
 
-#intro h1 {
+/* Section card background with overlay */
+.section-card-background {
+    position: relative;
+    width: 85%;
+    height: 60vh;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+
+    /* Shared background behavior */
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Light blue overlay so text stays readable */
+.section-card-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(210, 231, 246, 0.2);
+    z-index: 1; /* overlay layer */
+}
+
+/* INTRODUCTION BACKGROUND */
+.section-card-background--introduction {
+    background-image: url('../images/landing-page/introduction.png');
+}
+
+/* INTRODUCTION BACKGROUND */
+.section-card-background--aboutme {
+    background-image: url('../images/landing-page/aboutme.jpg');
+}
+
+.hero-content {
+    position: relative; /* above overlay */
+    text-align: center;
+    padding: 10rem 2rem 5rem;
+    color: #1f2933;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    z-index: 2; /* sits above overlay */
+}
+
+/* TIMELINE */
+.hero-label {
+    display: inline-block;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #09739c;  /* soft blue accent (adjust if desired) */
+    font-weight: 600; /* make it pop */
+}
+
+.hero-title {
+    font-size: clamp(2.3rem, 3vw, 3rem);
+    font-weight: 500;
+    margin: 0 0 1rem;
     font-family: 'Titillium_Web variant10', Tofu;
-    font-weight: 400;
     font-size: 4rem;
-    color: #d8d8d8ff;
+    color: rgb(0, 0, 0);
     letter-spacing: 0.1rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-transform: capitalize;
     text-align: center;
     position: relative;
 }
 
-#intro p {
-    font-size: 1.3rem;
-    font-weight: 200;
-    font-family: "titillium-web-light", sans-serif;
-    line-height: 1.5; /* Improves readability */
-    margin: 0;
-    color: #bdc3c7;
+.hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto 6rem;
+    color: #000000; /* darker, more readable gray */
+    font-weight: 400;
 }
 
-/* Portfolio Grid */
-#portfolio {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column; /* Stack each section vertically */
-    gap: 2rem; /* Add spacing between sections */
+/* Button styled like the “Explore the timeline” button */
+.hero-button {
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2.1rem;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    width: 150px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: #ffffff;
+    color: #111827;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.15s ease;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ensures exactly 3 columns per row */
-    gap: 1.5rem; /* Spacing between cards */
+.hero-button:hover {
+    transform: translateY(-1px);
+    background-color: #f9fafb;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.hero-button:active {
+    transform: translateY(0);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Make sure the intro snap-section can hold absolutely positioned arrows */
+.intro-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Outer wrapper that clips slides */
+.section-card-slider {
     width: 100%;
-    max-width: 1600px; /* Limits the grid's width for consistent layout */
+    height: 100%;
+    overflow: hidden;
 }
 
-/* Portfolio Card */
-.portfolio-card {
-    background-color: #101720;
-    border-radius: 10px;
+/* Track that actually slides left/right */
+.section-card-track {
+    display: flex;
+    width: 200%; /* 2 slides ⇒ 2 * 100% */
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Each slide takes a full "page" */
+.section-card.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Arrows on the sides */
+.intro-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+
+    background: rgba(16, 23, 32, 0.06);
+    color: #111827;
+    font-size: 1.6rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    z-index: 5; /* above content but below any modals */
+}
+
+.intro-arrow--left {
+    left: 3%;
+}
+
+.intro-arrow--right {
+    right: 3%;
+}
+
+.intro-arrow:hover {
+    background: rgba(16, 23, 32, 0.12);
+    transform: translateY(-50%) scale(1.06);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
+}
+
+
+
+/* ────────────────────────────── */
+/* PORTFOLIO SNAP SECTION        */
+/* ────────────────────────────── */
+
+/* Two-column hero layout: left image, right content */
+.portfolio-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    width: 85%;
+    margin: 0 auto;
+    height: 80vh;
+}
+
+/* LEFT: wrapper that controls shape & size */
+.portfolio-image-wrapper {
+    width: 100%;
+    height: 80vh;
+    border-radius: 32px;
+        position: relative;
+
+    /* Center the button inside it */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+/* The clickable card */
+.portfolio-button {
+    width: 100%;
+    height: 90%;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    display: block;
+    border-radius: inherit;
+    overflow: hidden;
+
+    /* Stronger, more dimensional gradient (cooler → warmer tone) */
+    background: linear-gradient(
+        180deg,
+        #b9d1e7 0%,   /* softer sky blue */
+        #c3d9ef 25%,  /* mid fade */
+        #dde8f7 60%,  /* lighter */
+        #fbfcff 100%  /* near-white */
+    );
+
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.05),
+        0 6px 12px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Hover / focus interaction */
+.portfolio-button:hover,
+.portfolio-button:focus {
+    transform: translateY(-4px);
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.1),
+        0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep accessibility for keyboard users */
+.portfolio-button:focus-visible {
+    outline: 3px solid rgba(140, 180, 255, 0.55);
+    outline-offset: 4px;
+}
+
+/* The image still fills it */
+.portfolio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Right side: text + buttons */
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+/* ────────────────────────────── */
+/* FULL-SCREEN PROJECTS OVERLAY  */
+/* ────────────────────────────── */
+.portfolio-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;      /* centers vertically */
+    justify-content: center;  /* centers horizontally */
+
+    padding: 6rem 0rem;
+    
+    /* swoosh in from bottom (you can keep this) */
+    animation: portfolioOverlayIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+/* closing state (swoosh down) */
+.portfolio-overlay--closing {
+    animation: portfolioOverlayOut 0.40s cubic-bezier(0.4, 0, 0.7, 0.2) forwards;
+}
+
+/* gradient background behind everything */
+.portfolio-backdrop {
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+}
+
+/* content area (keeps your section-card feel but full-screen) */
+.portfolio-modal {
+    position: relative;
+    z-index: 1;
+
+    width: 90%;
+    height: 85%;
+    box-sizing: border-box;
+
+    border-radius: 64px;
+    background: linear-gradient(
+        180deg,
+        #f9fbff 0%,      /* white with hint of blue */
+        #e3ecf6 30%,     /* soft cool silver */
+        #d4dde7 65%,     /* London Eye steel tone */
+        #efe9e1 100%     /* warm base to match skin tones & sun */
+    );
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Swoosh in / out keyframes */
+@keyframes portfolioOverlayIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes portfolioOverlayOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+/* Header */
+.portfolio-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0rem;
+}
+
+.portfolio-modal-title {
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+    font-size: clamp(2rem, 2.5vw, 2.6rem);
+    font-family: 'Titillium Web', Tofu;
+    display: inline-block;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #09739c;  /* soft blue accent (adjust if desired) */
+    font-weight: 600; /* make it pop */
+}
+
+/* Close button (top-right) */
+.portfolio-close {
+    border: none;
+    background: rgba(16, 23, 32, 0.06);
+    color: #111827;
+    border-radius: 999px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    position: absolute;
+    top: 3rem;
+    right: 6rem;
+
+    transition:
+        background-color 0.18s ease,
+        transform 0.16s ease,
+        box-shadow 0.16s ease;
+}
+
+.portfolio-close:hover {
+    background: rgba(16, 23, 32, 0.12);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+.portfolio-close:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* ────────────────────────────── */
+/* STRIPE-STYLE CARD LAYOUT      */
+/* ────────────────────────────── */
+
+.portfolio-inner {
+    padding: 0 10rem;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Stripe-like multi-column grid */
+.portfolio-track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 1rem;
-    text-align: center;
+    gap: 2rem 2rem;
 }
 
 .portfolio-card:hover {
-    box-shadow: 0 8px 16px rgba(187, 187, 187, 0.7);
+    transform: translateY(-6px);
+    background-color: #f7fbff;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.22);
 }
 
 .portfolio-card h3 {
-    font-size: 1.5rem;
-    color: #ffa500;
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+    color: #111827;
 }
 
-/* Navbar Placeholder (Import Navbar CSS Separately) */
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns per row on medium screens */
+/* ────────────────────────────── */
+/* RESPONSIVE                    */
+/* ────────────────────────────── */
+
+@media (max-width: 1100px) {
+    .portfolio-modal {
+        margin: 3rem 1.5rem;
+        padding: 2rem 1.75rem 2.5rem;
+        border-radius: 30px;
+    }
+
+    .portfolio-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* 1 column per row on smaller screens */
+    .portfolio-modal {
+        margin: 2.5rem 1rem;
+        padding: 1.75rem 1.25rem 2rem;
+        border-radius: 24px;
+    }
+
+    .portfolio-track {
+        grid-template-columns: 1fr;
     }
 }
