@@ -15,7 +15,7 @@ export const NavigationBar = (props: Props) => {
             <div className="nav-content-wrapper">
                 <div className="hyun-logo">
                     <a href="/">
-                        <img src={require("../../images/hyun-white.png")} alt="Logo" />
+                        <img src={require("../../images/navbar/hyun-black.png")} alt="Logo" />
                     </a>
                 </div>
                 <div className="links-container">

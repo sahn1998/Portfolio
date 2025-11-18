@@ -1,133 +1,3 @@
-/* Section Card, not full screen */
-.section-card {
-    width: 100%;
-    max-width: 2100px;         /* keep it nicely contained */
-    min-height: 70vh;          /* card height */
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 48px;
-    overflow: hidden;
-
-    background: none;
-}
-
-/* Section card background with overlay */
-.section-card-background {
-    position: relative;
-    width: 85%;
-    height: 60vh;
-    border-radius: 32px;
-    overflow: hidden;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
-
-    /* Shared background behavior */
-    background-size: cover;
-    background-position: center;
-}
-
-
-/* Light blue overlay so text stays readable */
-.section-card-background::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(210, 231, 246, 0.2);
-    z-index: 1; /* overlay layer */
-}
-
-/* INTRODUCTION BACKGROUND */
-.section-card-background--introduction {
-    background-image: url('../images/landing-page/introduction.png');
-}
-
-/* INTRODUCTION BACKGROUND */
-.section-card-background--aboutme {
-    background-image: url('../images/landing-page/aboutme.jpg');
-}
-
-.hero-content {
-    position: relative; /* above overlay */
-    text-align: center;
-    padding: 10rem 2rem 5rem;
-    color: #1f2933;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    z-index: 2; /* sits above overlay */
-}
-
-/* TIMELINE */
-.hero-label {
-    display: inline-block;
-    letter-spacing: 0.2em;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    color: #09739c;  /* soft blue accent (adjust if desired) */
-    font-weight: 600; /* make it pop */
-}
-
-.hero-title {
-    font-size: clamp(2.3rem, 3vw, 3rem);
-    font-weight: 500;
-    margin: 0 0 1rem;
-    font-family: 'Titillium_Web variant10', Tofu;
-    font-size: 4rem;
-    color: rgb(0, 0, 0);
-    letter-spacing: 0.1rem;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    text-transform: capitalize;
-    text-align: center;
-    position: relative;
-}
-
-.hero-subtitle {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 1000px;
-    margin: 0 auto 6rem;
-    color: #000000; /* darker, more readable gray */
-    font-weight: 400;
-}
-
-/* Button styled like the “Explore the timeline” button */
-.hero-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.85rem 2.1rem;
-    border-radius: 999px;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    width: 150px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    background: #ffffff;
-    color: #111827;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease,
-        background-color 0.15s ease;
-}
-
-.hero-button:hover {
-    transform: translateY(-1px);
-    background-color: #f9fafb;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
-}
-
-.hero-button:active {
-    transform: translateY(0);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
 /* Make sure the intro snap-section can hold absolutely positioned arrows */
 .intro-section {
     position: relative;
@@ -160,21 +30,25 @@
     justify-content: center;
 }
 
-/* Arrows on the sides */
-.intro-arrow {
+/* ===================== */
+/* Icons                 */
+/* ===================== */
+
+/* Slider Arrow for First Page */
+.slider-arrow-icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 
-    width: 44px;
-    height: 44px;
+    width: 65px;
+    height: 65px;
     border-radius: 999px;
     border: none;
     cursor: pointer;
 
-    background: rgba(16, 23, 32, 0.06);
+    background: rgba(16, 23, 32, 0.2);
     color: #111827;
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1;
     display: flex;
     align-items: center;
@@ -187,110 +61,76 @@
     z-index: 5; /* above content but below any modals */
 }
 
-.intro-arrow--left {
+.slider-arrow-icon--left {
     left: 3%;
 }
 
-.intro-arrow--right {
+.slider-arrow-icon--right {
     right: 3%;
 }
 
-.intro-arrow:hover {
-    background: rgba(16, 23, 32, 0.12);
+.slider-arrow-icon:hover {
+    background: rgba(16, 23, 32, 0.4);
     transform: translateY(-50%) scale(1.06);
     box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
 }
 
-
-
-/* ────────────────────────────── */
-/* PORTFOLIO SNAP SECTION        */
-/* ────────────────────────────── */
-
-/* Two-column hero layout: left image, right content */
-.portfolio-hero-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    align-items: center;
-    gap: 4rem;
-    width: 85%;
-    margin: 0 auto;
-    height: 80vh;
-}
-
-/* LEFT: wrapper that controls shape & size */
-.portfolio-image-wrapper {
-    width: 100%;
-    height: 80vh;
-    border-radius: 32px;
-        position: relative;
-
-    /* Center the button inside it */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-}
-
-/* The clickable card */
-.portfolio-button {
-    width: 100%;
-    height: 90%;
-    padding: 0;
-    border: none;
+/* Scroll Indicator for all pages */
+.scroll-indicator-wrapper-down {
+    position: absolute;
+    bottom: 6rem;
+    width: 100px;
+    height: 100px;
+    animation: bounce 1.5s infinite;
     cursor: pointer;
-    display: block;
-    border-radius: inherit;
-    overflow: hidden;
-
-    /* Stronger, more dimensional gradient (cooler → warmer tone) */
-    background: linear-gradient(
-        180deg,
-        #b9d1e7 0%,   /* softer sky blue */
-        #c3d9ef 25%,  /* mid fade */
-        #dde8f7 60%,  /* lighter */
-        #fbfcff 100%  /* near-white */
-    );
-
-    box-shadow:
-        0 6px 12px rgba(0, 0, 0, 0.05),
-        0 6px 12px rgba(0, 0, 0, 0.05);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
 }
 
-/* Hover / focus interaction */
-.portfolio-button:hover,
-.portfolio-button:focus {
-    transform: translateY(-4px);
-    box-shadow:
-        0 6px 20px rgba(0, 0, 0, 0.1),
-        0 6px 20px rgba(0, 0, 0, 0.1);
+/* Scroll Indicator for all pages */
+.scroll-indicator-wrapper-up {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+
+    z-index: 80;
 }
 
-/* Keep accessibility for keyboard users */
-.portfolio-button:focus-visible {
-    outline: 3px solid rgba(140, 180, 255, 0.55);
-    outline-offset: 4px;
+/* Arrow itself */
+.scroll-indicator {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/icons/arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform-origin: center;
 }
 
-/* The image still fills it */
-.portfolio-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+/* Down arrow */
+.scroll-indicator-down {
+  transform: rotate(90deg);
 }
 
-/* Right side: text + buttons */
-.portfolio-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
+/* Up arrow */
+.scroll-indicator-up {
+  transform: rotate(-90deg); /* or rotate(270deg) */
 }
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate(-50%, 0);
+    }
+    40% {
+        transform: translate(-50%, 12px);
+    }
+    60% {
+        transform: translate(-50%, 6px);
+    }
+}
+
 
 /* ────────────────────────────── */
 /* FULL-SCREEN PROJECTS OVERLAY  */

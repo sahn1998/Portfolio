@@ -1,12 +1,16 @@
 /* Navigation Bar Styles */
 #navbar {
-    position: fixed; /* Keeps the navbar fixed at the top */
-    top: 0; /* Aligns it to the top of the viewport */
-    left: 0; /* Aligns it to the left of the viewport */
-    width: 100%; /* Stretches it across the full width */
-    background-color: #131e2c; /* Background color */
-    z-index: 1000; /* Ensures it stays above other content */
-    padding: 1rem 0; /* Adds vertical padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+
+    z-index: 1000;
+
+    /* Transparent background, but slightly tinted for readability */
+    background-color: rgba(255, 255, 255, 0.0); /* white at 50% opacity */
+    backdrop-filter: blur(2px); /* optional: adds a nice blur effect behind the navbar */
 }
 
 /* Wrapper Styles */
@@ -40,18 +44,18 @@
 .link-logos {
     display: flex;
     align-items: center;
-    gap: 2rem; /* Adds spacing between links and icons */
+    gap: 2.5rem; /* Adds spacing between links and icons */
 }
 
 .links-wrapper {
-    margin-right: 2rem; /* Adds spacing between links and logos */
+    margin-right: 2.5rem; /* Adds spacing between links and logos */
 }
 
 .links-wrapper a {
-    font-family: "Titillium_Web variant0", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    color: white;
+    font-family: "Caveat", cursive;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: black;
     transition: color 0.3s ease; /* Smooth transition for hover effect */
     text-decoration: none;
 }
