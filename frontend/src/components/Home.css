@@ -1,9 +1,23 @@
+.page-container-main {
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* IE/Edge */
+
+    scroll-behavior: smooth;  /* 👈 add this */
+
+    position: relative;         /* essential to position arrow within this */
+}
+
 /* Make sure the intro snap-section can hold absolutely positioned arrows */
 .intro-section {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 /* Outer wrapper that clips slides */
@@ -46,7 +60,7 @@
     border: none;
     cursor: pointer;
 
-    background: rgba(16, 23, 32, 0.2);
+    background: rgba(16, 23, 32, 0.4);
     color: #111827;
     font-size: 2rem;
     line-height: 1;

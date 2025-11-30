@@ -9,8 +9,6 @@ import './Home.css'
 import './Global.css'
 import './Section.css'
 
-import portfolioImg from "../images/landing-page/portfolio.png";
-
 export const Homepage = () => {
     const SLIDES = [<IntroductionResume />, <IntroductionAbout />];
     const [activeSlide, setActiveSlide] = useState(0);
@@ -29,7 +27,7 @@ export const Homepage = () => {
 
 
     return (
-        <div className="page-container">
+        <div className="page-container page-container-main">
             <NavigationBar 
                 colorHome="rgba(0, 0, 0, 1)"
                 colorProjects="rgb(255, 255, 255)"

@@ -156,7 +156,7 @@ export const IntroductionResume = () => {
                 <p className="label-meta">Travel × Code Archive</p>
 
                 <h4 className="label-location">Seoul, South Korea</h4>
-                <p className="label-subtitle">2023 · Namsan Tower</p>
+                <p className="label-subtitle">2023 · NAMSAN TOWER</p>
 
                 <div className="label-divider"></div>
 

@@ -11,7 +11,7 @@ export const BinomialProject = () => {
                 className="project-link"
             >
                 <img
-                    src={require("../../images/binomial_equation_cover.png")}
+                    src={require("../../../../images/binomial_equation_cover.png")}
                     className="project-image"
                     alt="Binomial Distribution Visualization"
                 />

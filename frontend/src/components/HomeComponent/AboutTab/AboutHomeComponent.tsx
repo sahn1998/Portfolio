@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import "./AboutHomeComponent.css";
 import aboutPhoto from "../../../images/landing-page/aboutme.jpg"; 
 
@@ -7,6 +8,8 @@ interface AboutHomeComponentProps {
 }
 
 export const AboutHomeComponent: React.FC<AboutHomeComponentProps> = ({ onClose }) => {
+    const navigate = useNavigate();
+
     return (
         <div className="about-popover">
             <div className="about-popover-header">
@@ -26,11 +29,19 @@ export const AboutHomeComponent: React.FC<AboutHomeComponentProps> = ({ onClose 
                         src={aboutPhoto}
                         alt="Sunghyun in London, 2025"
                         className="about-photo"
+                        onClick={() => navigate("/aboutme")}
                     />
+
+                     <div className="about-photo-clickhint">
+                        Learn more about me →
+                    </div>
+
                     {/* Chat bubble */}
                     <div className="about-chat-bubble">
                         <p>
-                            Curiosity can bring abstract ideas to life, reignite the mind after failure, and motivate the hesitant.
+                            Curiosity can bring abstract ideas to life, 
+                            <br></br>
+                            reignite the mind after failure, and motivate the hesitant.
                         </p>
                     </div>
                 </div>
@@ -61,7 +72,7 @@ export const IntroductionAbout = () => {
                 <p className="label-meta">Travel × Code Archive</p>
 
                 <h4 className="label-location">Eastbourne, United Kingdom</h4>
-                <p className="label-subtitle">2025 · Seven Sisters Cliff</p>
+                <p className="label-subtitle">2025 · SEVEN SISTERS CLIFF</p>
 
                 <div className="label-divider"></div>
 
@@ -87,7 +98,7 @@ export const IntroductionAbout = () => {
                     className="section-button"
                     onClick={() => setAboutOpen(prev => !prev)}
                 >
-                    About Me
+                    My Motto
                 </button>
 
                 {aboutOpen && (

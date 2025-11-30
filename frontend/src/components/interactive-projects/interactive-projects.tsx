@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { NavigationBar } from '../navigation-bar/Navbar';
-import { BinomialProject } from '../display-projects/binomial_distribution';
+import { BinomialProject } from '../HomeComponent/PortfolioTab/ProjectCards/binomial_distribution';
 
 import '../Global.css'
 import './interactive-projects.css'
@@ -20,7 +20,7 @@ export const InteractiveProjects = () => {
         <div>
             <NavigationBar 
                 colorHome="rgb(255, 255, 255)"
-                colorProjects="rgb(183, 165, 122)"
+                colorProjects="rgba(0, 0, 0, 1)"
                 colorAbout="rgb(255, 255, 255)"
                 colorExperience="rgb(255, 255, 255)"
             />

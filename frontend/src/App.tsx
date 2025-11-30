@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Homepage } from "./components/Home";
-import { AboutPage } from './components/about-page/About';
+import { AboutPage } from './components/AboutPage/About';
 import { Resume } from './components/resume-page/Resume';
 import { InteractiveProjects } from './components/interactive-projects/interactive-projects';
 import { BinomialDistributionPage } from './components/interactive-projects/probabilities/bionomial/binomial';

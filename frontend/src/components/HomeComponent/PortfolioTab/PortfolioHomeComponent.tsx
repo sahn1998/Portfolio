@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import { CancerAnalysisProject } from '../../display-projects/cancer_analysis';
-import { KoreaExportEconomyProject } from '../../display-projects/korea_export_economy';
-import { BreastCancerProject } from '../../display-projects/breast_cancer';
-import { BinomialProject } from '../../display-projects/binomial_distribution';
+import { CancerAnalysisProject } from './ProjectCards/cancer_analysis';
+import { KoreaExportEconomyProject } from './ProjectCards/korea_export_economy';
+import { BreastCancerProject } from './ProjectCards/breast_cancer';
+import { BinomialProject } from './ProjectCards/binomial_distribution';
 
 import '../../Section.css';
 import '../../Global.css';
@@ -18,7 +18,7 @@ export const IntroductionPortfolio = () => {
                 <p className="label-meta">Travel × Code Archive</p>
 
                 <h4 className="label-location">Seattle, Washington </h4>
-                <p className="label-subtitle">2024 · Space Needle</p>
+                <p className="label-subtitle">2024 · SPACE NEEDLE</p>
 
                 <div className="label-divider"></div>
 

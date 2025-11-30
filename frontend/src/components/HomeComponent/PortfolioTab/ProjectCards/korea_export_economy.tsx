@@ -10,7 +10,7 @@ export const KoreaExportEconomyProject = () => {
                 rel="noopener noreferrer"
             >
                 <img 
-                    src={require('../../images/korea_export.PNG')} 
+                    src={require('../../../../images/korea_export.PNG')} 
                     className="project-image" 
                     alt="Korea Export Economy"
                 />

@@ -60,6 +60,7 @@
 .resume-popover-close:hover {
     background-color: rgba(145, 189, 209, 0.95);
 }
+
 /* Vertical timeline structure (inner container) */
 .resume-timeline {
     margin-top: 1.2rem;
@@ -148,7 +149,7 @@
     margin: 0.7rem 0 0; /* add spacing above */
     padding-left: 1.2rem; /* indent bullets */
     opacity: 0.85;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     line-height: 1.4;
 }
 

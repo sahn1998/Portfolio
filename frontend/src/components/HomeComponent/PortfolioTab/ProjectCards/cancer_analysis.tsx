@@ -10,7 +10,7 @@ export const CancerAnalysisProject = () => {
                 rel="noopener noreferrer"
             >
                 <img 
-                    src={require('../../images/cancer2.png')} 
+                    src={require('../../../../images/cancer2.png')} 
                     className="project-image" 
                     alt="Cancer Analysis"
                 />
