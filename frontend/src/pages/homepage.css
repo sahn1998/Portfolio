@@ -1,0 +1,306 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    color: white;
+    background-image: url('../images/pages/nightsky.png');
+    background-size: cover;
+    background-position: center;
+
+    /* Make background darker */
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+}
+
+.hero * {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* IE/Edge */
+}
+
+/* Container that holds the Globe canvas */
+.hero-globe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 350px;   /* <-- Move down (adjust this number) */
+    height: calc(100% - 350px);
+    z-index: 0; /* keep behind text */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Make sure the globe fills the hero */
+.hero-globe canvas {
+    width: 100% !important;
+    height: 100% !important;
+
+    transition: all 0.25s ease-out;
+    will-change: transform, opacity;
+}
+
+/* Your text/CTA on top of the globe */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.hero-content button {
+  align-self: center;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.globe-dot-hover {
+  display: inline-block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.globe-dot-hover:hover {
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+
+
+
+/* ========================= */
+/* LEFT: PHOTO LABEL        */
+/* (unchanged positioning)  */
+/* ========================= */
+
+.homepage-photo-label {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    transform: translateY(-50%);
+
+    width: 450px;
+    height: 450px;
+    padding: 1.75rem 2rem;
+
+    background-image: url('../images/pages/nightsky.png');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(7px);
+
+    /* Make background darker */
+    background-color: rgba(0, 0, 0, 0.15);
+    background-blend-mode: overlay;
+
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    font-family: "Titillium_Web variant0", sans-serif;
+    font-size: 2em;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    z-index: 3;
+}
+
+/* Top tag */
+.homepage-photo-label .label-meta {
+    font-size: .75rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    opacity: .7;
+    margin-bottom: 1rem;
+}
+
+/* Location */
+.homepage-photo-label .label-location {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+/* Subtitle line under location */
+.homepage-photo-label .label-subtitle {
+    margin: 0.8rem 0 1.2rem;
+    font-size: .9rem;
+    opacity: .9;
+}
+
+/* Divider */
+.homepage-photo-label .label-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.45);
+    margin: 0 0 1.5rem;
+}
+
+/* Bio story */
+.homepage-photo-label .label-story {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: .9rem;
+    line-height: 1.4;
+    letter-spacing: 0.15em;
+
+    font-weight: 500;
+    opacity: .9;
+
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+/* Tablet and smaller desktop (up to 1080px width) */
+@media (max-width: 1920px) {
+    .homepage-photo-label {
+        top: 25%;
+        left: 5%;
+        width: 300px;
+        height: 300px;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .homepage-photo-label .label-story {
+        font-size: .65rem;
+    }
+}
+
+/* Tablet and smaller desktop (up to 1080px width) */
+@media (max-width: 1440px) {
+    .homepage-photo-label {
+        top: 25%;
+        left: 5%;
+        width: 250px;
+        height: auto; /* auto-height to fit content */
+        padding: 1.75rem 2rem;
+    }
+
+    .homepage-photo-label .label-story {
+        font-size: .65rem;
+    }
+}
+
+/* Large mobile / small tablet (up to 768px width) */
+@media (max-width: 768px) {
+    .homepage-photo-label {
+        top: auto;
+        bottom: 2rem; /* moves it to the bottom for visual clarity */
+        left: 50%;
+        transform: translateX(-50%); /* center horizontally */
+        width: 90%;
+        max-width: 330px;
+        padding: 1.5rem 1.75rem;
+    }
+
+    .homepage-photo-label .label-meta {
+        font-size: .6rem;
+    }
+
+    .homepage-photo-label .label-location {
+        font-size: .85rem;
+    }
+
+    .homepage-photo-label .label-story {
+        font-size: .7rem;
+        line-height: 1.5;
+    }
+}
+
+/* Mobile (below ~480px) */
+@media (max-width: 480px) {
+    .homepage-photo-label {
+        width: 85%;
+        padding: 1.25rem 1.5rem;
+        bottom: 1.5rem;
+    }
+
+    .homepage-photo-label .label-story {
+        font-size: .68rem;
+        line-height: 1.4;
+    }
+}
+
+
+/* ===================== */
+/* SECTION: CONTENT */
+/* ===================== */
+.homepage-section-content {
+    position: relative; /* above overlay */
+    z-index: 2;         /* sits above overlay */
+
+    text-align: center;
+    padding: 10rem 2rem 5rem;
+
+    color: #1f2933;
+    font-family: "Titillium_Web variant0", sans-serif;
+}
+
+/* ===================== */
+/* TYPOGRAPHY */
+/* ===================== */
+
+/* Label (small uppercase above title) */
+.homepage-section-content .section-label {
+    display: inline-block;
+    margin-bottom: 0rem;
+
+    letter-spacing: 0.5em;
+    font-family: "Caveat", cursive;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    color: #fcff69;  /* soft blue accent */
+}
+
+/* Main section title */
+.homepage-section-content .section-title {
+    margin: 4rem 0 0;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+
+    font-family: "Caveat", cursive;
+    font-weight: 400;
+    font-size: 7rem; /* explicit size */
+    letter-spacing: 0.4rem;
+    color: rgb(255, 255, 255);
+
+    /* transform: translateX(-350px); make this same as globe hero container */
+}
+
+/* Subtitle / description text */
+.homepage-section-content .section-subtitle {
+    max-width: 1000px;
+    margin: 0.5rem auto;
+
+    font-size: 2rem;
+    font-family: "Caveat", cursive;
+    font-weight: 200;
+
+    line-height: 1.6;
+    font-weight: 200;
+    color: #ffffff; /* darker, more readable */
+}

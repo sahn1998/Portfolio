@@ -1,0 +1,437 @@
+.seattle-title {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: "Caveat", cursive;
+    font-weight: 500;
+    font-size: 6rem; /* explicit size */
+    letter-spacing: 0.4rem;
+    color: rgb(0, 0, 0);
+
+    z-index: 5;
+}
+
+/* ────────────────────────────── */
+/* HERO CARD (DOOR)               */
+/* ────────────────────────────── */
+
+.seattle-hero-card {
+    position: absolute;
+    width: 1200px;
+    height: 800px;
+    right: 50%;
+    top: 35%;
+    transform: translateY(-50%) translateX(50%) rotateY(0deg);
+    aspect-ratio: 4 / 3;
+    border-radius: 32px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 10;
+
+    box-shadow: 2px 24px 60px rgba(249, 255, 180, 0.5);
+    transform-style: preserve-3d;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.40s ease,
+        box-shadow 0.40s ease;
+}
+
+.seattle-hero-card:hover {
+    opacity: 0;  /* fade out */
+    transform: translateY(-50%) translateX(50%) scale(0.92); /* slight shrink */
+    box-shadow: none; /* remove glow as it fades */
+}
+
+/* Background image */
+.seattle-hero-photo {
+    position: absolute;
+    inset: 0;
+    background-image: url('../../../images/pages/city/seattle/uw.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Optional soft tint overlay */
+.seattle-hero-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(232, 245, 255, 0.08);
+}
+
+/* Quote bubble */
+.seattle-hero-bubble {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin-left: 1.8rem;
+    margin-top: 2.2rem;
+
+    background: rgba(250, 250, 250, 0.452);
+    border-radius: 24px;
+    padding: 1.2rem 1.4rem;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #1d1d1d;
+}
+
+/* ────────────────────────────── */
+/* RESPONSIVE                    */
+/* ────────────────────────────── */
+
+@media (max-width: 768px) {
+    .seattle-interaction-zone {
+        padding: 0;
+        display: block;
+    }
+
+    .seattle-hero-card {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        max-width: 100%;
+        margin-bottom: 2rem;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+    }
+
+}
+/* ========================= */
+/* LEFT: PHOTO LABEL        */
+/* (unchanged positioning)  */
+/* ========================= */
+
+.seattle-photo-label {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    transform: translateY(-50%);
+
+    width: 450px;
+    height: 450px;
+    padding: 1.75rem 2rem;
+
+    background: rgba(255, 255, 255, 0.45); /* soft glass effect */
+    backdrop-filter: blur(7px);
+
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+
+    font-family: "Titillium_Web variant0", sans-serif;
+    font-size: 2em;
+    letter-spacing: 0.06em;
+    color: #111;
+    z-index: 3;
+}
+
+/* Top tag */
+.seattle-photo-label .label-meta {
+    font-size: .67rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    opacity: .7;
+    margin-bottom: 1rem;
+}
+
+/* Location */
+.seattle-photo-label .label-location {
+    margin: 0;
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+/* Subtitle line under location */
+.seattle-photo-label .label-subtitle {
+    margin: .15rem 0 1.2rem;
+    font-size: .75rem;
+    opacity: .9;
+}
+
+/* Divider */
+.seattle-photo-label .label-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0,0.5);
+    margin: 0 0 1.5rem;
+}
+
+/* Bio story */
+.seattle-photo-label .label-story {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: .85rem;
+    line-height: 1.4;
+    letter-spacing: 0.15em;
+
+    font-weight: 500;
+    opacity: .9;
+
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+/* Tablet and smaller desktop (up to 1080px width) */
+@media (max-width: 1920px) {
+    .seattle-photo-label {
+        top: 25%;
+        left: 5%;
+        width: 300px;
+        height: 300px;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .seattle-photo-label .label-story {
+        font-size: .65rem;
+    }
+}
+
+/* Tablet and smaller desktop (up to 1080px width) */
+@media (max-width: 1440px) {
+    .seattle-photo-label {
+        top: 25%;
+        left: 5%;
+        width: 250px;
+        height: auto; /* auto-height to fit content */
+        padding: 1.75rem 2rem;
+    }
+
+    .seattle-photo-label .label-story {
+        font-size: .65rem;
+    }
+}
+
+/* Large mobile / small tablet (up to 768px width) */
+@media (max-width: 768px) {
+    .seattle-photo-label {
+        top: auto;
+        bottom: 2rem; /* moves it to the bottom for visual clarity */
+        left: 50%;
+        transform: translateX(-50%); /* center horizontally */
+        width: 90%;
+        max-width: 330px;
+        padding: 1.5rem 1.75rem;
+    }
+
+    .seattle-photo-label .label-meta {
+        font-size: .6rem;
+    }
+
+    .seattle-photo-label .label-location {
+        font-size: .85rem;
+    }
+
+    .seattle-photo-label .label-story {
+        font-size: .7rem;
+        line-height: 1.5;
+    }
+}
+
+/* Mobile (below ~480px) */
+@media (max-width: 480px) {
+    .seattle-photo-label {
+        width: 85%;
+        padding: 1.25rem 1.5rem;
+        bottom: 1.5rem;
+    }
+
+    .seattle-photo-label .label-story {
+        font-size: .68rem;
+        line-height: 1.4;
+    }
+}
+
+/* ────────────────────────────── */
+/* RIGHT-SIDE KLARNA-LIKE CARD RAIL */
+/* ────────────────────────────── */
+
+.seattle-card-stack-container {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%) translateX(50%);
+  width: 1000px;        /* how wide the rail area is */
+  height: 800px;
+  z-index: 12;
+  pointer-events: auto;
+}
+
+/* Horizontal scroll rail */
+.seattle-card-rail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.8rem 0.3rem;
+
+  scroll-behavior: smooth;
+  cursor: grab !important;       /* always show grab */
+
+  scrollbar-width: none;         /* Firefox */
+}
+
+.seattle-card-rail::-webkit-scrollbar {
+  height: 0;                     /* WebKit */
+}
+
+.seattle-card-rail.is-dragging {
+  cursor: grabbing !important;   /* while dragging */
+}
+
+/* Each card */
+.seattle-card {
+    position: relative;
+    flex: 0 0 400px;               /* card width */
+    height: 600px;
+
+    margin-right: -80px;           /* negative margin = overlap */
+    border-radius: 24px;
+    border: none;
+    overflow: hidden;
+    padding: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    background: #f4f4f4;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+    transform-origin: center;
+    transition:
+        transform 0.45s cubic-bezier(0.19, 1, 0.22, 1),
+        box-shadow 0.35s ease,
+        filter 0.35s ease;
+
+    cursor: grab !important;
+}
+
+/* background image */
+.seattle-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* gradient overlay for readability */
+.seattle-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0) 15%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+/* text content */
+.seattle-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 1rem 1.1rem 1.3rem;
+  color: #fdfdfd;
+  text-align: left;
+  font-family: "Titillium Web", system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+.seattle-card-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 0.35rem;
+}
+
+.seattle-card-title {
+  font-size: 1.05rem;
+  margin: 0 0 0.2rem;
+  font-weight: 700;
+}
+
+.seattle-card-subtitle {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* ────────────────────────────── */
+/* Klarna-like layered look       */
+/* ────────────────────────────── */
+
+.seattle-card-layer-0 {
+  transform: translateY(8px) rotate(-4deg);
+  z-index: 1;
+}
+
+.seattle-card-layer-1 {
+  transform: translateY(0px) rotate(0deg);
+  z-index: 2;
+}
+
+.seattle-card-layer-2 {
+  transform: translateY(10px) rotate(3deg);
+  z-index: 3;
+}
+
+.seattle-card-layer-3 {
+  transform: translateY(4px) rotate(-2deg);
+  z-index: 4;
+}
+.seattle-card-layer-4 {
+  transform: translateY(4px) rotate(-2deg);
+  z-index: 5;
+}
+.seattle-card-layer-5 {
+  transform: translateY(4px) rotate(-2deg);
+  z-index: 6;
+}
+.seattle-card-layer-6 {
+  transform: translateY(4px) rotate(-2deg);
+  z-index: 7;
+}
+
+
+/* hover over an individual card: bring it slightly forward */
+.seattle-card:hover {
+  transform: translateY(-16px) scale(1.08) !important;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.35);
+  filter: brightness(1.02);
+  z-index: 999;
+}
+
+.seattle-card-rail:hover {
+  transform: translateY(-4px);
+  transition: transform 0.4s ease;
+}
+
+.seattle-card-rail:hover .seattle-card:not(:hover) {
+  transform: translateY(6px) scale(0.96, 0.88) !important;
+  filter: brightness(0.85);
+  opacity: 0.85;
+}
+
+/* Mobile: reposition or hide if too tight */
+@media (max-width: 768px) {
+  .seattle-card-stack-container {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 360px;
+    margin: 2rem auto 0;
+    height: 210px;
+  }
+}

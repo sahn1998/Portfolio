@@ -15,3 +15,6 @@
 
 1. [Introduction](https://www.calltoidea.com/gallery/): A nice view that clears your mind
 2. 
+
+### Packages
+1. [Fluid Cursor Motion](https://github.com/whatisjery/react-fluid-distortion?tab=readme-ov-file)

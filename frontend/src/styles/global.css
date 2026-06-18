@@ -1,0 +1,210 @@
+/* Global Styles */
+/* Typography */
+html {
+    scroll-behavior: smooth; /* <-- Smooth scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+/* Global Variables */
+:root {
+    --title-font-family: 'Titillium_Web variant10', Tofu;
+    --font-family-regular: ".titillium-web-regular", sans-serif;
+    --font-family-light: ".titillium-web-light", sans-serif;
+    --background-color: #101720;
+    --title-color: #d8d8d8ff;
+    --reg-text-color: #bdc3c7;
+    --main-highlight-color: rgb(145, 189, 209);
+    --highlight-color: rgb(183, 165, 122);
+    --font-size-base: 1rem;
+    --font-size-large: 1.25rem;
+    --line-height-base: 1.5;
+    --line-height-large: 2;
+}
+
+body {
+    margin: 0;
+    font-family: "Titillium Web", sans-serif;
+    color: #bdc3c7;
+    background: linear-gradient(
+        180deg,
+        #bcd9f0 0%,
+        #cfe2f6 25%,
+        #e4effc 55%,
+        #f7faff 75%,
+        #ffffff 100%
+    );
+}
+
+/* page container already: width + padding; also acts as scroll container */
+.page-container {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Full-screen snapping panels */
+.snap-section {
+    min-height: 100vh;           /* Each section is a full "page" */
+
+    position: relative;
+    display: flex;
+    align-items: center;         /* Center contents vertically */
+    justify-content: center;     /* Center horizontally */
+
+    user-select: none;         /* CSS standard */
+    -webkit-user-select: none; /* Safari and older browsers */
+    -ms-user-select: none;     /* IE/Edge legacy */
+}
+
+/* ========================= */
+/* LEFT: PHOTO LABEL        */
+/* (unchanged positioning)  */
+/* ========================= */
+
+.section-photo-label {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    transform: translateY(-50%);
+
+    width: 400px;
+    height: 400px;
+    padding: 1.75rem 2rem;
+
+    background: rgba(255, 255, 255, 0.45); /* soft glass effect */
+    backdrop-filter: blur(7px);
+
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+
+    font-family: "Titillium_Web variant0", sans-serif;
+    font-size: 2em;
+    letter-spacing: 0.06em;
+    color: #111;
+    z-index: 3;
+}
+
+/* Top tag */
+.label-meta {
+    font-size: .67rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    opacity: .7;
+    margin-bottom: 1rem;
+}
+
+/* Location */
+.label-location {
+    margin: 0;
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+/* Subtitle line under location */
+.label-subtitle {
+    margin: .15rem 0 1.2rem;
+    font-size: .75rem;
+    opacity: .9;
+}
+
+/* Divider */
+.label-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0,0.15);
+    margin: 0 0 1.5rem;
+}
+
+/* Bio story */
+.label-story {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: .85rem;
+    line-height: 1.4;
+    letter-spacing: 0.15em;
+
+    font-weight: 500;
+    opacity: .9;
+
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+/* Tablet and smaller desktop (up to 1080px width) */
+@media (max-width: 1920px) {
+    .section-photo-label {
+        top: 25%;
+        left: 5%;
+        width: 300px;
+        height: 300px;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .label-story {
+        font-size: .65rem;
+    }
+}
+
+/* Tablet and smaller desktop (up to 1080px width) */
+@media (max-width: 1440px) {
+    .section-photo-label {
+        top: 25%;
+        left: 5%;
+        width: 250px;
+        height: auto; /* auto-height to fit content */
+        padding: 1.75rem 2rem;
+    }
+
+    .label-story {
+        font-size: .65rem;
+    }
+}
+
+/* Large mobile / small tablet (up to 768px width) */
+@media (max-width: 768px) {
+    .section-photo-label {
+        top: auto;
+        bottom: 2rem; /* moves it to the bottom for visual clarity */
+        left: 50%;
+        transform: translateX(-50%); /* center horizontally */
+        width: 90%;
+        max-width: 330px;
+        padding: 1.5rem 1.75rem;
+    }
+
+    .label-meta {
+        font-size: .6rem;
+    }
+
+    .label-location {
+        font-size: .85rem;
+    }
+
+    .label-story {
+        font-size: .7rem;
+        line-height: 1.5;
+    }
+}
+
+/* Mobile (below ~480px) */
+@media (max-width: 480px) {
+    .section-photo-label {
+        width: 85%;
+        padding: 1.25rem 1.5rem;
+        bottom: 1.5rem;
+    }
+
+    .label-story {
+        font-size: .68rem;
+        line-height: 1.4;
+    }
+}

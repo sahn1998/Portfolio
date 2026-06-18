@@ -1,0 +1,201 @@
+/* ===================== */
+/* SECTION: LAYOUT WRAPPER */
+/* ===================== */
+.section-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    background: none;
+}
+
+.section-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* adjust for more/less fade */
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(232, 245, 255, 0.856)); /* adjust colors */
+}
+
+/* ===================== */
+/* SECTION: BACKGROUND */
+/* ===================== */
+.section-card-background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    /* Shared background behavior */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Background overlay for readability */
+.section-card-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(210, 231, 246, 0.4);
+    z-index: 1; /* overlay layer */
+}
+
+/* Specific background images */
+.section-card-background--seoul {
+    background-image: url('../images/pages/city/seoul.jpeg');
+}
+
+.section-card-background--london {
+    background-image: url('../images/pages/city/london.jpeg');
+}
+
+.section-card-background--seattle {
+    background-image: url('../images/pages/city/seattle.jpeg');
+}
+
+.section-card-background--jacksonville {
+    background-image: url('../images/pages/city/jacksonville.jpeg');
+}
+
+.section-card-background--barcelona {
+    background-image: url('../images/pages/city/barcelona.jpeg');
+}
+
+.section-card-background--denver {
+    background-image: url('../images/pages/city/denver.jpeg');
+}
+
+.section-card-background--doha {
+    background-image: url('../images/pages/city/doha.jpeg');
+}
+
+.section-card-background--florence {
+    background-image: url('../images/pages/city/florence.jpeg');
+}
+
+.section-card-background--hokkaido {
+    background-image: url('../images/pages/city/hokkaido.jpeg');
+}
+
+.section-card-background--newyork {
+    background-image: url('../images/pages/city/newyork.jpeg');
+}
+
+.section-card-background--vienna {
+    background-image: url('../images/pages/city/vienna.jpeg');
+}
+
+.section-card-background--hongkong {
+    background-image: url('../images/pages/city/hongkong.jpeg');
+}
+
+/* ===================== */
+/* SECTION: CONTENT */
+/* ===================== */
+.section-content {
+    position: relative; /* above overlay */
+    z-index: 2;         /* sits above overlay */
+
+    text-align: center;
+    padding: 10rem 2rem 5rem;
+
+    color: #1f2933;
+    font-family: "Titillium_Web variant0", sans-serif;
+}
+
+/* ===================== */
+/* TYPOGRAPHY */
+/* ===================== */
+
+/* Label (small uppercase above title) */
+.section-label {
+    display: inline-block;
+    margin-bottom: 1rem;
+
+    letter-spacing: 0.5em;
+    font-family: "Caveat", cursive;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+    color: #09739c;  /* soft blue accent */
+}
+
+/* Main section title */
+.section-title {
+    margin: 6rem 0 0;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+
+    font-family: "Caveat", cursive;
+    font-weight: 500;
+    font-size: 6rem; /* explicit size */
+    letter-spacing: 0.4rem;
+    color: rgb(0, 0, 0);
+}
+
+/* Subtitle / description text */
+.section-subtitle {
+    max-width: 1000px;
+    margin: 0.5rem auto;
+
+    font-size: 1.5rem;
+    font-family: "Caveat", cursive;
+    font-weight: 200;
+
+    line-height: 1.6;
+    font-weight: 400;
+    color: #080808; /* darker, more readable */
+}
+
+/* ===================== */
+/* BUTTON                */
+/* ===================== */
+.section-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 250px;
+    min-width: 150px;   /* NEW: guarantees horizontal size */
+    flex-shrink: 0;     /* NEW: prevents squeezing inside flex containers */
+
+    padding: 0.85rem 2.1rem;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    font-family: "Caveat", cursive;
+    font-weight: 1000;
+    font-size: 1rem;
+
+    background: rgba(204, 245, 255, 0.9); /* soft glass effect */
+    color: #111827;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.section-button:hover {
+    transform: translateY(-1px);
+    background-color: rgba(61, 205, 241, 0.7);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.section-button:active {
+    transform: translateY(0);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
