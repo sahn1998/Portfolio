@@ -18,10 +18,10 @@ export const Seattle = () => {
     return (
         <div className="page-container page-container-main">
             <NavigationBar 
-                colorHome="rgb(255, 255, 255)"
-                colorProjects="rgb(255, 255, 255)"
-                colorAbout="rgb(255, 255, 255)"
-                colorExperience="rgb(255, 255, 255)"
+                colorHome="rgb(0, 0, 0)"
+                colorProjects="rgb(0, 0, 0)"
+                colorAbout="rgb(0, 0, 0)"
+                colorExperience="rgb(0, 0, 0)"
             />
             {/* Fullscreen snap panel for intro */}
             <section className="snap-section intro-section" id="seattle">
