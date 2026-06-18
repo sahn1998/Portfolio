@@ -45,6 +45,7 @@
 .about-layout-panel {
     width: 50%;
     height: 77%;
+    left: 10%;
 
     background: radial-gradient(
         circle at top left,

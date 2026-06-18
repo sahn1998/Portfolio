@@ -44,11 +44,11 @@
     position: absolute;
     top: 6.5rem;
     bottom: 3rem;
-    right: 5%;
+    right: 10%;
 
     width: 75%;
     min-width: 480px;
-    max-width: 1700px;
+    max-width: 1400px;
 
     background: radial-gradient(
         circle at top left,
@@ -116,7 +116,7 @@
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.4rem;
+    gap: 1.3rem;
 }
 
 /* ========================= */

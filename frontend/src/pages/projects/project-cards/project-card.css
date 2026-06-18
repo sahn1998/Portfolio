@@ -78,7 +78,7 @@
 .project-title {
     margin: 0;
     color: #111827;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 600;
     font-family: "Titillium Web", sans-serif;
     letter-spacing: 0.06rem;
@@ -89,7 +89,7 @@
 .project-description {
     margin: 0;
     color: #4b5563; /* soft gray */
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: "Titillium Web", sans-serif;
     line-height: 1.5;
 }
@@ -106,7 +106,7 @@
     text-transform: uppercase;
 
     color: #005b85; /* matches your muted blue */
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 /* ────────────────────────────── */
