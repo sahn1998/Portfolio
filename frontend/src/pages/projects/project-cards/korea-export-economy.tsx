@@ -1,17 +1,18 @@
 import './project-card.css';
-import koreaExportImage from "../../images/korea-export.png";
+import koreaExportImage from "../../../images/korea-export.png";
 
 export const KoreaExportEconomyProject = () => {
     return (
-        <div className="project"> 
-            <a 
-                href="https://medium.com/@sahn1998/eda-on-south-koreas-export-sector-aa6a09022387" 
-                target="_blank" 
+        <div className="project">
+            <a
+                href="https://medium.com/@sahn1998/eda-on-south-koreas-export-sector-aa6a09022387"
+                target="_blank"
                 rel="noopener noreferrer"
+                className="project-link"
             >
-                <img 
-                    src={koreaExportImage} 
-                    className="project-image" 
+                <img
+                    src={koreaExportImage}
+                    className="project-image"
                     alt="Korea Export Economy"
                 />
             </a>

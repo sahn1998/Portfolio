@@ -16,7 +16,7 @@
 
     height: 100vh;
 
-    background-image: url('../../images/pages/resume/gangnam.jpeg'); /* <--- swap to your image */
+    background-image: url('../../images/pages/resume/hungary.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,67 +37,21 @@
 }
 
 /* ========================= */
-/* LEFT LABEL BLOCK          */
-/* ========================= */
-
-.resume-label-block {
-    position: absolute;
-    left: 6%;
-    bottom: 14%;
-
-    max-width: 320px;
-    padding: 1.1rem 1.4rem;
-
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(10px);
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-
-    color: #f4f4f4;
-    z-index: 2;
-}
-
-.resume-label-meta {
-    font-family: var(--font-family-regular);
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    opacity: 0.75;
-    margin-bottom: 0.4rem;
-}
-
-.resume-label-title {
-    margin: 0 0 0.35rem;
-    font-family: var(--title-font-family);
-    font-size: 1rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.resume-label-subtitle {
-    margin: 0;
-    font-size: 0.8rem;
-    line-height: 1.5;
-    opacity: 0.9;
-}
-
-/* ========================= */
 /* RIGHT OVERLAY COLUMN      */
 /* ========================= */
 
 .resume-overlay-column {
     position: absolute;
-    top: 5.5rem;
+    top: 6rem;
     bottom: 3rem;
     right: 5%;
 
     width: 40%;
     min-width: 420px;
-    max-width: 600px;
+    max-width: 1400px;
 
     padding: 1.7rem 1.9rem;
 
-    /* Blended into background, not a hard box */
     background: radial-gradient(
         circle at top left,
         rgba(16, 23, 32, 0.72),
@@ -156,83 +110,152 @@
 }
 
 /* ========================= */
-/* EXPERIENCE BLOCKS         */
+/* TIMELINE                  */
 /* ========================= */
 
-.resume-experience {
-    padding: 0.85rem 0 1.2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.resume-timeline {
+    position: relative;
 }
 
-.resume-experience:last-of-type {
-    border-bottom: none;
+.resume-timeline-item {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.6rem;
 }
 
-/* Header row: role / company / dates + small images */
-.resume-experience-header {
+.resume-timeline-item--last {
+    padding-bottom: 0.2rem;
+}
+
+.resume-timeline-rail {
+    position: relative;
+    width: 14px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Connecting vertical line */
+.resume-timeline-rail::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    bottom: -1.6rem;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.resume-timeline-item--last .resume-timeline-rail::before {
+    display: none;
+}
+
+.resume-timeline-dot {
+    position: relative;
+    z-index: 1;
+    width: 11px;
+    height: 11px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background: var(--highlight-color);
+    box-shadow: 0 0 0 4px rgba(183, 165, 122, 0.18);
+}
+
+.resume-timeline-card {
+    flex: 1;
+    min-width: 0;
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.resume-timeline-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.16);
+    transform: translateX(2px);
+}
+
+/* Header row: role / company + small images */
+.resume-card-top {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 0.8rem;
-    margin-bottom: 0.5rem;
 }
 
-.resume-experience-meta {
-    max-width: 65%;
+.resume-card-heading {
+    max-width: 70%;
 }
 
 .resume-role {
     font-family: var(--font-family-regular);
-    font-size: 0.95rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: #ffffff;
-    margin: 0 0 0.1rem;
+    margin: 0 0 0.5rem;
 }
 
 .resume-company {
     font-family: var(--font-family-light);
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.85);
-    margin: 0 0 0.1rem;
+    margin: 0;
 }
 
-.resume-dates {
+.resume-card-meta {
+    margin: 0.7rem 0 0.7rem;
     font-family: var(--font-family-light);
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.6);
-    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.resume-meta-sep {
+    margin: 0 0.4rem;
+    opacity: 0.6;
 }
 
 /* Small thumbnails on the right */
 .resume-experience-images {
     display: flex;
     gap: 0.35rem;
+    flex-shrink: 0;
 }
 
 .resume-experience-images img {
-    width: 42px;
-    height: 42px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-/* Bullets / body */
-.resume-experience-body {
-    margin-top: 0.35rem;
+/* Bullets */
+.resume-detail-list {
+    margin: 0;
+    padding-left: 1.1rem;
 }
 
-.resume-detail {
+.resume-detail-list li {
     font-family: var(--font-family-light);
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     line-height: 1.55;
     color: var(--reg-text-color);
 
-    margin: 0 0 0.35rem;
+    margin: 0 0 0.3rem;
     text-align: justify;
     text-justify: inter-word;
+}
+
+.resume-detail-list li::marker {
+    color: var(--highlight-color);
+}
+
+.resume-detail-list li:last-child {
+    margin-bottom: 0;
 }
 
 /* ========================= */
@@ -246,7 +269,7 @@
         max-width: 620px;
     }
 
-    .resume-detail {
+    .resume-detail-list li {
         font-size: 0.8rem;
     }
 }
@@ -260,17 +283,11 @@
         padding: 1.5rem 1.6rem;
     }
 
-    .resume-label-block {
-        left: 5%;
-        bottom: 12%;
-        max-width: 280px;
-    }
-
     .resume-role {
         font-size: 0.9rem;
     }
 
-    .resume-detail {
+    .resume-detail-list li {
         font-size: 0.78rem;
     }
 }
@@ -292,12 +309,6 @@
         max-width: 520px;
         height: 80%;
     }
-
-    .resume-label-block {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 2rem;
-    }
 }
 
 /* ≤ 480px (mobile) */
@@ -313,7 +324,11 @@
         font-size: 1.15rem;
     }
 
-    .resume-detail {
+    .resume-card-heading {
+        max-width: 60%;
+    }
+
+    .resume-detail-list li {
         font-size: 0.75rem;
         line-height: 1.45;
     }
@@ -321,11 +336,5 @@
     .resume-experience-images img {
         width: 36px;
         height: 36px;
-    }
-
-    .resume-label-block {
-        max-width: 260px;
-        padding: 1rem 1.1rem;
-        bottom: 1.5rem;
     }
 }

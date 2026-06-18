@@ -1,17 +1,18 @@
 import './project-card.css';
-import cancerImage from "../../images/cancer-2.png";
+import cancerImage from "../../../images/cancer-2.png";
 
 export const CancerAnalysisProject = () => {
     return (
-        <div className="project"> 
-            <a 
-                href="https://medium.com/@sahn1998/cancer-unveiling-the-impact-of-a-relentless-disease-f03f8cecc6fe" 
-                target="_blank" 
+        <div className="project">
+            <a
+                href="https://medium.com/@sahn1998/cancer-unveiling-the-impact-of-a-relentless-disease-f03f8cecc6fe"
+                target="_blank"
                 rel="noopener noreferrer"
+                className="project-link"
             >
-                <img 
-                    src={cancerImage} 
-                    className="project-image" 
+                <img
+                    src={cancerImage}
+                    className="project-image"
                     alt="Cancer Analysis"
                 />
             </a>

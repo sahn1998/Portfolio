@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AboutPage } from './pages/about/about';
 import { Resume } from './pages/resume/resume';
 import { InteractiveProjects } from './pages/projects/projects';
-import { BinomialDistributionPage } from './pages/projects/probabilities/binomial/binomial-distribution';
+import { BinomialDistributionPage } from './pages/projects/binomial-distribution/binomial-distribution';
 import { BackgroundFluid } from './features/mouse/background-fluid';
 import { HomePage } from './pages/homepage';
 import { Seoul } from './pages/city/seoul/seoul';

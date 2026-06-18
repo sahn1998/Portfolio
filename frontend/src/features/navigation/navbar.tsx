@@ -3,9 +3,9 @@ import './navbar.css';
 
 import blacklogo from '../../images/navbar/hyun-black.png';
 import whitelogo from '../../images/navbar/hyun-white.png';
-import linkedinLogo from '../../images/linkedin.png';
-import githubLogo from '../../images/github.png';
-import emailLogo from '../../images/email.png';
+import linkedinLogo from '../../images/icons/linkedin.png';
+import githubLogo from '../../images/icons/github.png';
+import emailLogo from '../../images/icons/email.png';
 
 export interface Props {
     colorHome?: string;

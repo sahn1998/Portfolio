@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { SimpleSlider } from "../pages/projects/slider";
-import { BarChart } from "../pages/projects/bar-chart";
-import binomialPMF from '../images/pages/projects/binomial-pmf.png'
-import { NavigationBar } from "../features/navigation/navbar";
+import { SimpleSlider } from "./features/slider";
+import { BarChart } from "./features/bar-chart";
+import binomialPMF from '../../../images/pages/projects/binomial-pmf.png'
+import { NavigationBar } from "../../../features/navigation/navbar";
 
-import "./binomial.css";
+import "./binomial-distribution.css";
 
 export const BinomialDistributionPage: React.FC = () => {
 	const [trialSliderValue, setTrialSliderValue] = useState(5000);
@@ -45,7 +45,7 @@ export const BinomialDistributionPage: React.FC = () => {
                     <div className=" navbar">
                         <NavigationBar 
                             colorHome={"rgb(255, 255, 255)"}
-                            colorProjects={"rgb(183, 165, 122)"}
+                            colorProjects={"rgba(255, 251, 0, 1)"}
                             colorAbout={"rgb(255, 255, 255)"}
                             colorExperience={"rgb(255, 255, 255)"}
                         />

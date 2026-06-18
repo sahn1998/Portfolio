@@ -1,17 +1,18 @@
 import './project-card.css';
-import breastCancerImage from "../../images/breast-cancer.png";
+import breastCancerImage from "../../../images/breast-cancer.png";
 
 export const BreastCancerProject = () => {
     return (
-        <div className="project"> 
-            <a 
-                href="https://medium.com/ai-mind-labs/breast-ultrasound-image-cancer-classification-with-vgg16-and-pytorch-part-1-6359c0243b03" 
-                target="_blank" 
+        <div className="project">
+            <a
+                href="https://medium.com/ai-mind-labs/breast-ultrasound-image-cancer-classification-with-vgg16-and-pytorch-part-1-6359c0243b03"
+                target="_blank"
                 rel="noopener noreferrer"
+                className="project-link"
             >
-                <img 
-                    src={breastCancerImage} 
-                    className="project-image" 
+                <img
+                    src={breastCancerImage}
+                    className="project-image"
                     alt="Breast Cancer Project"
                 />
             </a>

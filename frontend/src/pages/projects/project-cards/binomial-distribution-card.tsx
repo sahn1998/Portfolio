@@ -1,22 +1,18 @@
+import { Link } from 'react-router-dom';
 import './project-card.css';
 
 import binomialImage from "../../../images/pages/projects/binomial-equation-cover.png";
 
 export const BinomialProject = () => {
     return (
-        <div className="project">
-            <a
-                href="/interactive-projects/binomial-distribution"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-            >
+        <Link to="/interactive-projects/binomial-distribution" className="project">
+            <div className="project-link">
                 <img
                     src={binomialImage}
                     className="project-image"
                     alt="Binomial Distribution Visualization"
                 />
-            </a>
+            </div>
 
             <div className="project-text-section">
                 <p className="project-title">
@@ -29,6 +25,6 @@ export const BinomialProject = () => {
                 </p>
                 <p className="date-title">Dec. 8, 2024</p>
             </div>
-        </div>
+        </Link>
     );
 };

@@ -3,66 +3,126 @@ import { NavigationBar } from '../../features/navigation/navbar';
 import './resume.css';
 import '../../styles/global.css';
 
-// Props Type Definitions
-interface SectionHeaderProps {
-    title: string;
-}
+import chemtopiaImage from '../../images/pages/resume/chemtopia.jpg';
+import sunghyunAhn2024Image from '../../images/pages/resume/sunghyun-ahn-2024.jpg';
+import sungAhnMilitaryImage from '../../images/pages/resume/sung-ahn-military.jpg';
+import teaSung from '../../images/pages/resume/tea-sung.jpg';
+import teaLogo from '../../images/pages/resume/tea-logo.jpg';
+import seattleUniversityImage from '../../images/pages/resume/seattle-university.png';
+import rokaImage from '../../images/pages/resume/roka.png';
+import businessImpactGroupLogo from '../../images/pages/resume/business-impact-group-logo.png';
 
-interface ExperienceSectionProps {
+interface ExperienceData {
     role: string;
     company: string;
+    location: string;
     dates: string;
-    images: string[]; // Array of image paths
-    details: string[]; // Array of detail strings
+    images: string[];
+    details: string[];
 }
 
-// Header Component
-const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => (
-    <div className="resume-section-header">
-        <p className="resume-kicker">Experience · Journey</p>
-        <h1 className="resume-title">{title}</h1>
-    </div>
-);
+const EXPERIENCES: ExperienceData[] = [
+    {
+        role: 'Data Scientist',
+        company: 'The Energy Authority',
+        location: 'Bellevue, Washington',
+        dates: 'Sep. 2025 — Present',
+        images: [teaLogo, teaSung],
+        details: [
+            'Optimization modeling for Operational Storage (BESS) and Colocated/Hybrid Resource Energy Market Bidding (CAISO/SPP) across utility client portfolios.',
+            'Development of Stora - solar and storage optimization application for operational energy market bidding. ',
+            'Risk report analysis & dashboarding'
+        ]
+    },
+    {
+        role: 'Graduate Researcher (ML for Healthcare)',
+        company: 'Seattle University',
+        location: 'Seattle, Washington',
+        dates: 'Jan. 2025 — Present',
+        images: [seattleUniversityImage],
+        details: [
+            'Developed biomedical risk prediction models using transfer learning across heterogeneous tabular datasets.',
+            'Utilized TensorFlow & Cloud platforms (Jetstream2, AWS EC2) for scalable deep learning training.',
+            'Designed and optimized model architecture for ResNet50 and MobileNetV2, improving recall score by 20%.',
+            'Conducted advanced feature engineering to improve model generalization and performance.'
+        ]
+    },
+    {
+        role: 'Regulatory Analytics Consultant',
+        company: 'Chemtopia Co., Ltd.',
+        location: 'Seoul, South Korea',
+        dates: 'Aug. 2023 — Aug. 2024',
+        images: [chemtopiaImage, sunghyunAhn2024Image],
+        details: [
+            'Processed 250K+ chemical records using SQL, Python, and Excel, flagging PFAS compounds and improving regulatory compliance accuracy by 15%.',
+            'Created 15+ dashboard-style presentations across 10 clients and 50+ projects, cutting manual reporting time by 40% through reusable templates.',
+            'Detected 30+ data integrity issues in chemical inventory logs, enabling proactive corrections that reduced $100K in chemical export expenditures.',
+            'Directed data-driven compliance strategies for 50+ REACH projects across Korea, EU, Türkiye, UK, and USA.'
+        ]
+    },
+    {
+        role: 'Operations Data & Language Specialist (SGT)',
+        company: 'Republic of Korea Army · 7th Corps HQ — G3',
+        location: 'Seoul, South Korea',
+        dates: 'Oct. 2021 — Apr. 2023',
+        images: [sungAhnMilitaryImage, rokaImage],
+        details: [
+            'Analyzed 100K+ datapoints from training simulations and improved strategic readiness metrics by 30% through actionable insights.',
+            'Developed an Excel dashboard suite used by 3 brigades, reducing weekly report prep time from 6 to 2 hours.',
+            'Supported 10+ U.S. & ROKA joint missions as a bilingual analyst, enhancing data flow and tactical alignment.'
+        ]
+    },
+    {
+        role: 'Project Manager',
+        company: 'Business Impact Group',
+        location: 'Seattle, Washington',
+        dates: 'Mar. 2019 — Mar. 2020',
+        images: [businessImpactGroupLogo],
+        details: [
+            'Designed a 5-stage Project Management Plan (PMP), improving project completion efficiency by 20%.',
+            'Led 3 client projects focused on operational analysis, improving client ROI by an estimated 18% based on post-project KPIs.',
+            'Designed and ran A/B tests on website design impacting 5K+ users, identifying features that improved engagement by 5%.'
+        ]
+    }
+];
 
-// Experience Section
-const ExperienceSection: React.FC<ExperienceSectionProps> = ({
-    role,
-    company,
-    dates,
-    images,
-    details
-}) => (
-    <section className="resume-experience">
-        <div className="resume-experience-header">
-            <div className="resume-experience-meta">
-                <p className="resume-role">{role}</p>
-                <p className="resume-company">{company}</p>
-                <p className="resume-dates">{dates}</p>
-            </div>
-            {images && images.length > 0 && (
-                <div className="resume-experience-images">
-                    {images.slice(0, 2).map((image, index) => (
-                        <img
-                            key={index}
-                            src={image}
-                            alt={`${company} image ${index + 1}`}
-                        />
-                    ))}
+const ExperienceItem: React.FC<{ experience: ExperienceData; isLast: boolean }> = ({ experience, isLast }) => (
+    <article className={`resume-timeline-item${isLast ? ' resume-timeline-item--last' : ''}`}>
+        <div className="resume-timeline-rail">
+            <span className="resume-timeline-dot" />
+        </div>
+
+        <div className="resume-timeline-card">
+            <div className="resume-card-top">
+                <div className="resume-card-heading">
+                    <h3 className="resume-role">{experience.role}</h3>
+                    <p className="resume-company">{experience.company}</p>
                 </div>
-            )}
-        </div>
 
-        <div className="resume-experience-body">
-            {details.map((detail, index) => (
-                <p key={index} className="resume-detail">
-                    {detail}
-                </p>
-            ))}
+                {experience.images.length > 0 && (
+                    <div className="resume-experience-images">
+                        {experience.images.slice(0, 2).map((image, index) => (
+                            <img key={index} src={image} alt={`${experience.company} ${index + 1}`} />
+                        ))}
+                    </div>
+                )}
+            </div>
+
+            <p className="resume-card-meta">
+                <span className="resume-dates">{experience.dates}</span>
+                <span className="resume-meta-sep">·</span>
+                <span className="resume-location">{experience.location}</span>
+            </p>
+
+            <ul className="resume-detail-list">
+                {experience.details.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                ))}
+            </ul>
         </div>
-    </section>
+    </article>
 );
 
-// Resume Page
 export const Resume: React.FC = () => (
     <div className="page-container resume-page-container">
         <NavigationBar
@@ -72,112 +132,41 @@ export const Resume: React.FC = () => (
             colorExperience="rgba(0, 0, 0, 1)"
         />
 
-        {/* Single full-screen hero-style section */}
         <section className="snap-section resume-section" id="resume">
             <div className="resume-section-inner">
-                {/* LEFT-SIDE FIXED PHOTO LABEL (same as About) */}
                 <div className="section-photo-label">
-                    <p className="label-meta">Resume × Career Archive</p>
+                    <p className="label-meta">TRAVEL × CAREER ARCHIVE</p>
 
-                    <h4 className="label-location">Seattle, Washington</h4>
-                    <p className="label-subtitle">2015 — Present · The Journey in Data</p>
+                    <h4 className="label-location">Budapest, Hungary</h4>
+                    <p className="label-subtitle">2016 — Present · The Journey in Data</p>
 
                     <div className="label-divider"></div>
 
                     <p className="label-story">
-                        My path across science, data, and global perspectives began long before I knew the
-                        destination.  
+                        My path across science, data, and global perspectives began long before I knew the destination.
                         <br /><br />
-                        From Seoul to Seattle, every step — education, military service, analytics work, startups,
-                        and research — shaped how I solve problems and create value.
+                        From my birthplace, Seoul, to wherever my journey has taken me, every step has shaped how I solve problems and create value. My education, military service, analytics work, startups, and research have been the landmarks that refined my thinking and built my skills.
                         <br /><br />
-                        This resume isn’t just a timeline — it’s a map of experiences that refined how I think,
-                        learn, and build.
+                        This resume isn't just a timeline. It's a map of experiences that refined how I think, learn, and build.
                     </p>
                 </div>
 
-
-                {/* Right-side overlay column (absolute-ish, anchored right) */}
                 <div className="resume-overlay-column">
-                    <SectionHeader title="Experiences" />
+                    <div className="resume-section-header">
+                        <p className="resume-kicker">Experience · Journey</p>
+                        <h1 className="resume-title">Career Timeline</h1>
+                    </div>
 
                     <div className="resume-scroll-column">
-                        <ExperienceSection
-                            role="Graduate Research Assistant"
-                            company="Seattle University"
-                            dates="Jan. 2025 - Present"
-                            images={[]}
-                            details={[
-                                "● Developed an end-to-end machine learning pipeline for asthma health risk prediction, integrating clinical and environmental features in collaboration with Soonchunhyang University Medical Center.",
-                                "● Implemented spatial transformation techniques on tabular patient data to enable transfer learning in computer vision frameworks.",
-                                "● Designed and optimized model architecture for ResNet50 and MobileNetV2, improving recall-score by 20%.",
-                                "● Leveraged TensorFlow and PyTorch across Jetstream2 and AWS EC2 cloud platforms for scalable training and evaluation."
-                            ]}
-                        />
-
-                        <ExperienceSection
-                            role="Regulatory & Analytics Consultant"
-                            company="Chemtopia Co., Ltd."
-                            dates="Aug. 2023 - Aug. 2024"
-                            images={[
-                                require('../../images/pages/resume/chemtopia.jpg'),
-                                require('../../images/pages/resume/sunghyun-ahn-2024.jpg')
-                            ]}
-                            details={[
-                                "● Processed 250K+ chemical records using SQL, Python, and Excel, flagging PFAS compounds and improving regulatory compliance accuracy by 15%.",
-                                "● Created 15+ dashboard-style presentations across 10 clients and 50+ projects, cutting manual reporting time by 40% through reusable templates.",
-                                "● Detected 30+ data integrity issues in chemical inventory logs, enabling proactive corrections that reduced $100K in chemical export expenditures.",
-                                "● Reduced cross-team chemical inventory & regulatory data handoff delays by 2x through Excel automation.",
-                                "● Directed data-driven compliance strategies for 50+ REACH projects across Korea, EU, Türkiye, UK, and USA.",
-                                "● Managed 40+ clients across petroleum, petrochemical, polymer, specialty chemicals, and semiconductor industries."
-                            ]}
-                        />
-
-                        <ExperienceSection
-                            role="Operations Data & Language Specialist (SGT)"
-                            company="Republic of Korea Army | 7th Corps HQ - G3"
-                            dates="Oct. 2021 - Apr. 2023"
-                            images={[
-                                require('../../images/pages/resume/sung-ahn-military.jpg'),
-                                require('../../images/pages/resume/roka.png')
-                            ]}
-                            details={[
-                                "● Analyzed 100K+ datapoints from training simulations and improved strategic readiness metrics by 30% through actionable insights.",
-                                "● Developed Excel dashboard suite used by 3 brigades, reducing weekly report prep time from 6 to 2 hours.",
-                                "● Supported 10+ U.S. joint missions as a bilingual analyst, enhancing data flow and tactical alignment."
-                            ]}
-                        />
-
-                        <ExperienceSection
-                            role="CEO / Team Leader"
-                            company="CuraStem | Challenge! K-Startup 2022"
-                            dates="Jan. 2022 - Dec. 2022"
-                            images={[
-                                require('../../images/pages/resume/k-startup-competition.jpg'),
-                                require('../../images/pages/resume/presentation.jpg')
-                            ]}
-                            details={[
-                                "● Co-founded 'CuraStem', a startup focused on a multi-layer adipose/collagen stem-cell patch 'CuraBurn' for treating severe 2nd and 3rd degree burns.",
-                                "● Constructed investor-facing pitch decks that led to a final placement of 11th out of 5,420 startups, earning over $20,000 in prize funds.",
-                                "● Built market-entry strategies, competitor analysis, and a five-year roadmap, including first-stage investment and product positioning plans.",
-                                "● Identified major constraints for a biotech startup and designed countermeasure plans to address operational and regulatory risks."
-                            ]}
-                        />
-
-                        <ExperienceSection
-                            role="Project Manager"
-                            company="Business Impact Group"
-                            dates="Mar. 2019 - Mar. 2020"
-                            images={[
-                                require('../../images/pages/resume/business-impact-group-logo.png')
-                            ]}
-                            details={[
-                                "● Designed a 5-stage Project Management Plan (PMP), improving project completion efficiency by 20%.",
-                                "● Led 3 client projects focused on operational analysis, improving client ROI by an estimated 18% based on post-project KPIs.",
-                                "● Designed and ran A/B tests on website design impacting 5K+ users, identifying features that improved engagement by 5%.",
-                                "● Streamlined sprint planning across a 5-member team, reducing blockers and boosting task completion rate by 30%."
-                            ]}
-                        />
+                        <div className="resume-timeline">
+                            {EXPERIENCES.map((experience, index) => (
+                                <ExperienceItem
+                                    key={`${experience.company}-${index}`}
+                                    experience={experience}
+                                    isLast={index === EXPERIENCES.length - 1}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
