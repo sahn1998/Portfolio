@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./jacksonville.css";
 import { NavigationBar } from '../../../features/navigation/navbar';
-import houseImage from "../../../images/pages/city/jacksonville/house.jpg";
 import riversideImage from "../../../images/pages/city/jacksonville/riverside.jpg";
 
 export const Jacksonville = () => {

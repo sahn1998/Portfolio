@@ -1,4 +1,3 @@
-import React from 'react';
 import "./denver.css";
 import "../../../styles/section.css";
 import "../../../styles/global.css";

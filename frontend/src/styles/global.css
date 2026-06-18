@@ -72,8 +72,8 @@ body {
     left: 5%;
     transform: translateY(-50%);
 
-    width: 400px;
-    height: 400px;
+    width: 375px;
+    height: 375px;
     padding: 1.75rem 2rem;
 
     background: rgba(255, 255, 255, 0.45); /* soft glass effect */
@@ -84,7 +84,7 @@ body {
     border: 1px solid rgba(0,0,0,0.08);
 
     font-family: "Titillium_Web variant0", sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     letter-spacing: 0.06em;
     color: #111;
     z-index: 3;
@@ -92,7 +92,7 @@ body {
 
 /* Top tag */
 .label-meta {
-    font-size: .67rem;
+    font-size: .65rem;
     letter-spacing: .1em;
     text-transform: uppercase;
     opacity: .7;
@@ -127,7 +127,7 @@ body {
 .label-story {
     font-family: "Raleway", sans-serif;
     font-style: normal;
-    font-size: .85rem;
+    font-size: .75rem;
     line-height: 1.4;
     letter-spacing: 0.15em;
 

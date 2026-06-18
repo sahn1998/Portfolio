@@ -99,8 +99,8 @@
     left: 5%;
     transform: translateY(-50%);
 
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
     padding: 1.75rem 2rem;
 
     background-image: url('../images/pages/nightsky.png');
@@ -144,7 +144,7 @@
 /* Subtitle line under location */
 .homepage-photo-label .label-subtitle {
     margin: 0.8rem 0 1.2rem;
-    font-size: .9rem;
+    font-size: .8rem;
     opacity: .9;
 }
 
@@ -160,7 +160,7 @@
 .homepage-photo-label .label-story {
     font-family: "Raleway", sans-serif;
     font-style: normal;
-    font-size: .9rem;
+    font-size: .8rem;
     line-height: 1.4;
     letter-spacing: 0.15em;
 
@@ -284,7 +284,7 @@
 
     font-family: "Caveat", cursive;
     font-weight: 400;
-    font-size: 7rem; /* explicit size */
+    font-size: 6rem; /* explicit size */
     letter-spacing: 0.4rem;
     color: rgb(255, 255, 255);
 
@@ -296,7 +296,7 @@
     max-width: 1000px;
     margin: 0.5rem auto;
 
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: "Caveat", cursive;
     font-weight: 200;
 

@@ -42,13 +42,13 @@
 
 .projects-layout-panel {
     position: absolute;
-    top: 6rem;
+    top: 6.5rem;
     bottom: 3rem;
     right: 5%;
 
-    width: 78%;
+    width: 75%;
     min-width: 480px;
-    max-width: 1800px;
+    max-width: 1700px;
 
     background: radial-gradient(
         circle at top left,
