@@ -138,7 +138,7 @@ export const Resume: React.FC = () => (
                     <p className="label-meta">TRAVEL × CAREER ARCHIVE</p>
 
                     <h4 className="label-location">Budapest, Hungary</h4>
-                    <p className="label-subtitle">2016 — Present · The Journey in Data</p>
+                    <p className="label-subtitle">My Professional Journey</p>
 
                     <div className="label-divider"></div>
 

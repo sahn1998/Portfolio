@@ -1,0 +1,44 @@
+/* ============================================================
+   PROJECTS — TIER 3 — 1366x768  (1366px – 1919px)
+   Counterpart to projects.css (Tier 1) and projects.tier2.css
+   (Tier 2). Must be imported AFTER projects.tier2.css so these
+   rules win in the 1366px–1919px range, where both tiers'
+   max-width queries are simultaneously true.
+   ============================================================ */
+@media (max-width: 1919px) {
+    .projects-layout-panel {
+        right: 4%;
+        width: 62%;
+        min-width: 420px;
+        max-width: 760px;
+        padding: 1.5rem 1.6rem;
+    }
+
+    .projects-section-header {
+        flex-shrink: 0;
+    }
+
+    .projects-kicker {
+        font-family: var(--font-family-regular);
+        font-size: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0 0 0.2rem;
+    }
+
+    .projects-title {
+        font-family: var(--title-font-family);
+        font-weight: 500;
+        font-size: 1rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--title-color);
+        margin: 0;
+    }
+
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

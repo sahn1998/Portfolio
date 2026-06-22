@@ -1,3 +1,8 @@
+/* ============================================================
+   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   No media query: these rules apply unless overridden below.
+   ============================================================ */
+
 /* Navigation Bar Styles */
 #navbar {
     position: fixed;
@@ -76,6 +81,69 @@
     transform: scale(1.1); /* Slight zoom on hover */
 }
 
+/* ============================================================
+   TIER 2 — 1920x1080  (1920px – 2559px)
+   ============================================================ */
+@media (max-width: 2559px) {
+    .nav-content-wrapper {
+        max-width: 1400px;
+    }
+
+    .hyun-logo img {
+        height: 3.1rem;
+    }
+
+    .links-wrapper,
+    .link-logos {
+        gap: 2rem;
+    }
+
+    .links-wrapper {
+        margin-right: 2rem;
+    }
+
+    .links-wrapper a {
+        font-size: 1rem;
+    }
+
+    .link-logos img {
+        height: 22px;
+    }
+}
+
+/* ============================================================
+   TIER 3 — 1366x768  (1366px – 1919px)
+   ============================================================ */
+@media (max-width: 1919px) {
+    .nav-content-wrapper {
+        max-width: 1200px;
+    }
+
+    .hyun-logo img {
+        height: 2.2rem;
+    }
+
+    .links-wrapper,
+    .link-logos {
+        gap: 1.5rem;
+    }
+
+    .links-wrapper {
+        margin-right: 1.5rem;
+    }
+
+    .links-wrapper a {
+        font-size: 0.7rem;
+    }
+
+    .link-logos img {
+        height: 15px;
+    }
+}
+
+/* ============================================================
+   MOBILE / TABLET (existing breakpoint, left unchanged)
+   ============================================================ */
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-content-wrapper {

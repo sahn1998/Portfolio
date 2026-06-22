@@ -6,6 +6,8 @@ import { KoreaExportEconomyProject } from './project-cards/korea-export-economy'
 
 import '../../styles/global.css';
 import './projects.css';
+import './projects.tier2.css';
+import './projects.tier3.css';
 
 export const InteractiveProjects = () => {
     return (
@@ -20,10 +22,10 @@ export const InteractiveProjects = () => {
             <section className="snap-section projects-section" id="projects">
                 <div className="projects-section-inner">
                     <div className="section-photo-label">
-                        <p className="label-meta">Projects × Project Archive</p>
+                        <p className="label-meta">TRAVEL × Project Archive</p>
 
-                        <h4 className="label-location">Brighton, England</h4>
-                        <p className="label-subtitle">2016 — Present · Building While Learning</p>
+                        <h4 className="label-location">Brighton, UNITED KINGDOM</h4>
+                        <p className="label-subtitle">Small projects & Explorations</p>
 
                         <div className="label-divider"></div>
 

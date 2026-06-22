@@ -1,0 +1,83 @@
+/* ============================================================
+   SEATTLE — TIER 3 — 1366x768  (1366px – 1919px)
+   Counterpart to seattle.css (Tier 1) and seattle.tier2.css
+   (Tier 2). Must be imported AFTER seattle.tier2.css so these
+   rules win in the 1366px–1919px range, where both tiers'
+   max-width queries are simultaneously true.
+   ============================================================ */
+@media (max-width: 1919px) {
+    .seattle-title {
+        font-size: 2.5rem;
+        letter-spacing: 0.2rem;
+    }
+
+    /* The Photo Label Box */
+    .seattle-photo-label {
+        top: 35%;     /* top should be 35% for all TIER 3 Photo Labels */
+        left: 5%;
+        width: 225px; /* width should be 225px for all TIER 3 Photo Labels */
+        height: 250px; /* height should be 250px for all TIER 3 Photo Labels */
+        padding: 1.75rem 2rem;
+    }
+
+    /* Top tag */
+    .seattle-photo-label .label-meta {
+        font-size: .5rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        opacity: .7;
+        margin-bottom: 1rem;
+    }
+
+    /* Location */
+    .seattle-photo-label .label-location {
+        margin: 0;
+        font-size: 1.0rem;
+        text-transform: uppercase;
+    }
+
+    /* Subtitle line under location */
+    .seattle-photo-label .label-subtitle {
+        margin: 0.5rem 0 0.5rem;
+        font-size: .6rem;
+        opacity: .9;
+    }
+
+    /* Divider */
+    .seattle-photo-label .label-divider {
+        margin: 0 0 0.5rem;
+    }
+
+    /* Bio story */
+    .seattle-photo-label .label-story {
+        font-size: .5rem;
+    }
+
+    /* =================================== */
+    .seattle-card-stack-container {
+        width: 600px;
+        height: 480px;
+    }
+
+    .seattle-card {
+        flex: 0 0 240px;
+        height: 360px;
+        margin-right: -48px;
+    }
+
+    .seattle-card-content {
+        padding: 0.7rem 0.8rem 0.95rem;
+    }
+
+    .seattle-card-label {
+        font-size: 0.55rem;
+    }
+
+    .seattle-card-title {
+        font-size: 0.85rem;
+    }
+
+    .seattle-card-subtitle {
+        font-size: 0.68rem;
+    }
+}

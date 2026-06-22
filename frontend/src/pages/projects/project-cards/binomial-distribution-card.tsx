@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import './project-card.css';
+import './project-card.tier2.css';
+import './project-card.tier3.css';
 
 import binomialImage from "../../../images/pages/projects/binomial-equation-cover.png";
 

@@ -1,0 +1,102 @@
+/* ============================================================
+   ABOUT — TIER 3 — 1366x768  (1366px – 1919px)
+   Counterpart to about.css (Tier 1) and about.tier2.css
+   (Tier 2). Must be imported AFTER about.tier2.css so these
+   rules win in the 1366px–1919px range, where both tiers'
+   max-width queries are simultaneously true.
+   ============================================================ */
+@media (max-width: 1919px) {
+
+    .about-section-inner {
+        padding: 5rem 1.8rem 1.8rem;
+    }
+
+    .about-layout-panel {
+        width: 55%;
+        padding: 1.6rem 1.8rem;
+        height: 82%;
+    }
+
+    .about-hero-kicker {
+        font-family: var(--font-family-regular);
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .about-profile-row {
+        grid-template-columns: 200px minmax(0, 1fr);
+    }
+
+    .about-profile-image-wrap {
+        display: flex;
+        justify-content: left;
+    }
+
+    /* Image goes smaller + more vertical fit */
+    .about-profile-card {
+        width: 200px;
+        height: 250px;
+    }
+
+    .about-profile-text {
+        font-family: var(--font-family-light);
+        color: var(--reg-text-color);
+        display: flex;
+        flex-direction: column;
+        gap: .1rem;
+    }
+
+    /* Text adjustments */
+    .about-profile-list p {
+        font-size: .8rem;
+    }
+
+    .about-profile-highlight {
+        color: var(--highlight-color);
+        font-weight: 500;
+        font-size: .8rem;
+        letter-spacing: 0.02em;
+        font-family: var(--font-family-regular);
+    }
+
+    .about-profile-body {
+        font-size: .8rem;
+        line-height: 1.5;
+    }
+
+    .pillar-card {
+        padding: 0.9rem 0.9rem;
+    }
+
+    .pillar-label {
+        font-size: 0.8rem;
+    }
+
+    .pillar-text {
+        font-size: 0.6rem;
+    }
+
+    .about-hero-inner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-hero-title {
+        font-size: 1rem;
+        line-height: 0em;
+        letter-spacing: 0.06em;
+        margin-bottom: 0rem;
+    }
+
+    /* Button very compact */
+    .about-toggle-button {
+        bottom: 0.5rem;
+        right: 0.5rem;
+        font-size: 0.6rem;
+        padding: 0.3rem 0.7rem;
+    }
+}

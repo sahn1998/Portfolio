@@ -111,6 +111,11 @@
 /* TYPOGRAPHY */
 /* ===================== */
 
+/* ============================================================
+   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   No media query: these rules apply unless overridden below.
+   ============================================================ */
+
 /* Label (small uppercase above title) */
 .section-label {
     display: inline-block;
@@ -198,4 +203,67 @@
 .section-button:active {
     transform: translateY(0);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================
+   TIER 2 — 1920x1080  (1920px – 2559px)
+   ============================================================ */
+@media (max-width: 2559px) {
+    .section-label {
+        font-size: 1.2rem;
+        letter-spacing: 0.4em;
+    }
+
+    .section-title {
+        margin: 4.5rem 0 0;
+        font-size: 3.8rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .section-subtitle {
+        max-width: 800px;
+        font-size: 1.15rem;
+    }
+
+    .section-button {
+        width: 220px;
+        min-width: 140px;
+        padding: 0.75rem 1.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================================
+   TIER 3 — 1366x768  (1366px – 1919px)
+   ============================================================ */
+@media (max-width: 1919px) {
+    .section-content {
+        text-align: center;
+        padding: 5rem 2rem 5rem;
+
+        color: #1f2933;
+        font-family: "Titillium_Web variant0", sans-serif;
+    }
+
+    .section-label {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        margin: 1.0rem 0 0;
+        font-size: 2.8rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .section-subtitle {
+        max-width: 600px;
+        font-size: 1.2rem;
+    }
+
+    .section-button {
+        width: 200px;
+        min-width: 130px;
+        padding: 0.65rem 1.5rem;
+        font-size: 0.7rem;
+    }
 }

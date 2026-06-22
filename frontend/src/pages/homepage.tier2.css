@@ -1,0 +1,38 @@
+/* ============================================================
+   HOMEPAGE — TIER 2 — 1920x1080  (1920px – 2559px)
+   Counterpart to homepage.css (Tier 1) and homepage.tier3.css
+   (Tier 3). All rules here are scoped to this tier's media
+   query, so import order relative to the other two files
+   doesn't matter for correctness, only for override priority
+   at the shared 1366px–1919px range (tier3 must load after
+   tier2 there — see homepage.tsx).
+   ============================================================ */
+@media (max-width: 2559px) {
+    .homepage-photo-label {
+        top: 25%;
+        left: 5%;
+        width: 300px;
+        height: 300px;
+        padding: 1.25rem 1.5rem;
+    }
+
+    /* This is the main label part */
+    .homepage-photo-label .label-story {
+        font-size: .65rem;
+    }
+
+    .homepage-section-content .section-label {
+        font-size: 1.3rem;
+    }
+
+    .homepage-section-content .section-title {
+        margin: 3rem 0 0;
+        font-size: 4.5rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .homepage-section-content .section-subtitle {
+        max-width: 800px;
+        font-size: 1.6rem;
+    }
+}

@@ -1,4 +1,6 @@
 import './project-card.css';
+import './project-card.tier2.css';
+import './project-card.tier3.css';
 import koreaExportImage from "../../../images/korea-export.png";
 
 export const KoreaExportEconomyProject = () => {

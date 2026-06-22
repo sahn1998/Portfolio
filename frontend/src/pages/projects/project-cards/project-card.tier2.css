@@ -1,0 +1,49 @@
+/* ============================================================
+   PROJECT CARD — TIER 2 — 1920x1080  (1920px – 2559px)
+   Counterpart to project-card.css (Tier 1) and
+   project-card.tier3.css (Tier 3). All rules here are scoped
+   to this tier's media query, so import order relative to the
+   other two files doesn't matter for correctness, only for
+   override priority at the shared 1366px–1919px range (tier3
+   must load after tier2 there — see the project card .tsx files).
+
+   At this tier the projects-layout-panel caps at 880px wide
+   (see projects.tier2.css) while the grid stays at 3 columns,
+   so cards are noticeably narrower than Tier 1 and need a
+   more compact scale than the sub-1366px mobile breakpoints.
+   ============================================================ */
+@media (max-width: 2559px) {
+    .project {
+        gap: 0.7rem;
+        border-radius: 20px;
+        padding: 1.1rem 1.2rem 1.3rem;
+    }
+
+    .project-link {
+        border-radius: 12px;
+    }
+
+    .project-image {
+        height: 130px;
+        border-radius: 12px;
+    }
+
+    .project-text-section {
+        gap: 0.4rem;
+    }
+
+    .project-title {
+        font-size: 0.82rem;
+        line-height: 1.3;
+    }
+
+    .project-description {
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+
+    .date-title {
+        font-size: 0.5rem;
+        padding-top: 0.6rem;
+    }
+}

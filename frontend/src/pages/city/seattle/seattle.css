@@ -1,3 +1,11 @@
+/* ============================================================
+   SEATTLE — TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   This file holds ONLY the Tier 1 (base) rules, plus the
+   existing mobile/tablet breakpoints (768px / 480px), which
+   are a separate system left untouched.
+   See seattle.tier2.css (1920x1080) and seattle.tier3.css
+   (1366x768) for the other two responsive tiers.
+   ============================================================ */
 .seattle-title {
     position: absolute;
     bottom: 7%;
@@ -80,10 +88,9 @@
     color: #1d1d1d;
 }
 
-/* ────────────────────────────── */
-/* RESPONSIVE                    */
-/* ────────────────────────────── */
-
+/* ============================================================
+   MOBILE / TABLET (existing breakpoints, left unchanged)
+   ============================================================ */
 @media (max-width: 768px) {
     .seattle-interaction-zone {
         padding: 0;
@@ -176,37 +183,6 @@
 
     text-align: justify;
     text-justify: inter-word;
-}
-
-
-/* Tablet and smaller desktop (up to 1080px width) */
-@media (max-width: 1920px) {
-    .seattle-photo-label {
-        top: 25%;
-        left: 5%;
-        width: 300px;
-        height: 300px;
-        padding: 1.25rem 1.5rem;
-    }
-
-    .seattle-photo-label .label-story {
-        font-size: .65rem;
-    }
-}
-
-/* Tablet and smaller desktop (up to 1080px width) */
-@media (max-width: 1440px) {
-    .seattle-photo-label {
-        top: 25%;
-        left: 5%;
-        width: 250px;
-        height: auto; /* auto-height to fit content */
-        padding: 1.75rem 2rem;
-    }
-
-    .seattle-photo-label .label-story {
-        font-size: .65rem;
-    }
 }
 
 /* Large mobile / small tablet (up to 768px width) */

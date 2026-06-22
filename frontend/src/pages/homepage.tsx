@@ -4,6 +4,8 @@ import Globe from "react-globe.gl";
 import { NavigationBar } from "../features/navigation/navbar";
 
 import "./homepage.css";
+import "./homepage.tier2.css";
+import "./homepage.tier3.css";
 
 type Place = {
     name: string;

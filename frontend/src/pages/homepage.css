@@ -1,3 +1,11 @@
+/* ============================================================
+   HOMEPAGE — TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   This file holds ONLY the Tier 1 (base) rules, plus the
+   existing mobile/tablet breakpoints (768px / 480px), which
+   are a separate system left untouched.
+   See homepage.tier2.css (1920x1080) and homepage.tier3.css
+   (1366x768) for the other two responsive tiers.
+   ============================================================ */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -23,7 +31,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 350px;   /* <-- Move down (adjust this number) */
+    top: 300px;   /* <-- Move down (adjust this number) */
     height: calc(100% - 350px);
     z-index: 0; /* keep behind text */
     justify-content: center;
@@ -171,37 +179,9 @@
     text-justify: inter-word;
 }
 
-
-/* Tablet and smaller desktop (up to 1080px width) */
-@media (max-width: 1920px) {
-    .homepage-photo-label {
-        top: 25%;
-        left: 5%;
-        width: 300px;
-        height: 300px;
-        padding: 1.25rem 1.5rem;
-    }
-
-    .homepage-photo-label .label-story {
-        font-size: .65rem;
-    }
-}
-
-/* Tablet and smaller desktop (up to 1080px width) */
-@media (max-width: 1440px) {
-    .homepage-photo-label {
-        top: 25%;
-        left: 5%;
-        width: 250px;
-        height: auto; /* auto-height to fit content */
-        padding: 1.75rem 2rem;
-    }
-
-    .homepage-photo-label .label-story {
-        font-size: .65rem;
-    }
-}
-
+/* ============================================================
+   MOBILE / TABLET (existing breakpoints, left unchanged)
+   ============================================================ */
 /* Large mobile / small tablet (up to 768px width) */
 @media (max-width: 768px) {
     .homepage-photo-label {

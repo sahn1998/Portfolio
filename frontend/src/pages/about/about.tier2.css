@@ -1,0 +1,36 @@
+/* ============================================================
+   ABOUT — TIER 2 — 1920x1080  (1920px – 2559px)
+   Counterpart to about.css (Tier 1) and about.tier3.css
+   (Tier 3). All rules here are scoped to this tier's media
+   query, so import order relative to the other two files
+   doesn't matter for correctness, only for override priority
+   at the shared 1366px–1919px range (tier3 must load after
+   tier2 there — see about.tsx).
+   ============================================================ */
+@media (max-width: 2559px) {
+
+    /* Panel shrinks slightly */
+    .about-layout-panel {
+        width: 50%;
+    }
+
+    /* Hero title slightly smaller */
+    .about-hero-title {
+        font-size: 1rem;
+    }
+
+    /* Profile body + list */
+    .about-profile-body {
+        font-size: 1rem;
+    }
+
+    .about-profile-list p {
+        font-size: 1rem;
+    }
+
+    /* Image slightly smaller */
+    .about-profile-card {
+        max-width: 520px;
+        height: 600px;
+    }
+}

@@ -2,6 +2,14 @@
 /* PROJECT CARD – SKY/PASTEL THEME */
 /* ────────────────────────────── */
 
+/* ============================================================
+   PROJECT CARD — TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   This file holds ONLY the Tier 1 (base) rules, plus the
+   existing mobile/tablet breakpoints (1024px / 768px), which
+   are a separate system left untouched.
+   See project-card.tier2.css (1920x1080) and project-card.tier3.css
+   (1366x768) for the other two responsive tiers.
+   ============================================================ */
 .project {
     display: flex;
     flex-direction: column;
@@ -111,6 +119,8 @@
 
 /* ────────────────────────────── */
 /* RESPONSIVE                     */
+/* Note: these breakpoints (1024px/768px) sit below the 1366px */
+/* floor of the 3-tier desktop system and are left as-is.       */
 /* ────────────────────────────── */
 
 @media (max-width: 1024px) {

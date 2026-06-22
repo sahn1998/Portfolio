@@ -1,3 +1,7 @@
+/* ============================================================
+   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   No media query: these rules apply unless overridden below.
+   ============================================================ */
 .resume-popover {
     position: fixed;
     left: calc(100% + 15rem); /* to the right of the button */
@@ -218,8 +222,10 @@
     z-index: 10;
 }
 
-/* Large screens: 1920px and up */
-@media (max-width: 2625px) {
+/* ============================================================
+   TIER 2 — 1920x1080  (1920px – 2559px)
+   ============================================================ */
+@media (max-width: 2559px) {
     .resume-popover {
         width: 500px; /* wider on ultra-wide monitors */
         left: calc(100% + 14rem); /* adjust placement if needed */
@@ -234,8 +240,10 @@
     }
 }
 
-/* Large screens: 1920px and up */
-@media (max-width: 2250px) {
+/* ============================================================
+   TIER 3 — 1366x768  (1366px – 1919px)
+   ============================================================ */
+@media (max-width: 1919px) {
     .resume-popover {
         width: 500px; /* wider on ultra-wide monitors */
         left: calc(100% + 9rem); /* adjust placement if needed */
@@ -255,6 +263,10 @@
 /* (unchanged positioning)  */
 /* ========================= */
 
+/* ============================================================
+   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   No media query: these rules apply unless overridden below.
+   ============================================================ */
 .seoul-photo-label {
     position: absolute;
     top: 25%;
@@ -328,8 +340,10 @@
 }
 
 
-/* Tablet and smaller desktop (up to 1080px width) */
-@media (max-width: 1920px) {
+/* ============================================================
+   TIER 2 — 1920x1080  (1920px – 2559px)
+   ============================================================ */
+@media (max-width: 2559px) {
     .seoul-photo-label {
         top: 25%;
         left: 5%;
@@ -343,21 +357,56 @@
     }
 }
 
-/* Tablet and smaller desktop (up to 1080px width) */
-@media (max-width: 1440px) {
+/* ============================================================
+   TIER 3 — 1366x768  (1366px – 1919px)
+   ============================================================ */
+@media (max-width: 1919px) {
+    /* The Photo Label Box */
     .seoul-photo-label {
-        top: 25%;
+        top: 35%;     /* top should be 35% for all TIER 3 Photo Labels */
         left: 5%;
-        width: 250px;
-        height: auto; /* auto-height to fit content */
+        width: 225px; /* width should be 225px for all TIER 3 Photo Labels */
+        height: 250px; /* height should be 250px for all TIER 3 Photo Labels */
         padding: 1.75rem 2rem;
     }
 
+    /* Top tag */
+    .seoul-photo-label .label-meta {
+        font-size: .5rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        opacity: .7;
+        margin-bottom: 1rem;
+    }
+
+    /* Location */
+    .seoul-photo-label .label-location {
+        margin: 0;
+        font-size: 1.0rem;
+        text-transform: uppercase;
+    }
+
+    /* Subtitle line under location */
+    .seoul-photo-label .label-subtitle {
+        margin: 0.5rem 0 0.5rem;
+        font-size: .6rem;
+        opacity: .9;
+    }
+
+    /* Divider */
+    .seoul-photo-label .label-divider {
+        margin: 0 0 0.5rem;
+    }
+
+    /* Bio story */
     .seoul-photo-label .label-story {
-        font-size: .65rem;
+        font-size: .5rem;
     }
 }
 
+/* ============================================================
+   MOBILE / TABLET (existing breakpoints, left unchanged)
+   ============================================================ */
 /* Large mobile / small tablet (up to 768px width) */
 @media (max-width: 768px) {
     .seoul-photo-label {

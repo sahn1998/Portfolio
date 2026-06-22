@@ -5,6 +5,8 @@ import { NavigationBar } from '../../../features/navigation/navbar';
 import '../../../styles/section.css';
 import '../../../styles/global.css';
 import './seattle.css';
+import './seattle.tier2.css';
+import './seattle.tier3.css';
 
 import uw from "../../../images/pages/city/seattle/uw.jpg";
 import seattleU from "../../../images/pages/city/seattle/seattleuniversity.jpg";

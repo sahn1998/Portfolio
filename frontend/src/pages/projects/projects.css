@@ -1,3 +1,12 @@
+/* ============================================================
+   PROJECTS — TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   This file holds ONLY the Tier 1 (base) rules, plus the
+   existing mobile/tablet breakpoints (768px / 480px), which
+   are a separate system left untouched.
+   See projects.tier2.css (1920x1080) and projects.tier3.css
+   (1366x768) for the other two responsive tiers.
+   ============================================================ */
+
 /* ========================= */
 /* PAGE + SECTION BASE      */
 /* ========================= */
@@ -119,33 +128,9 @@
     gap: 1.3rem;
 }
 
-/* ========================= */
-/* RESPONSIVE                */
-/* ========================= */
-
-/* ≤ 1920px */
-@media (max-width: 1920px) {
-    .projects-layout-panel {
-        width: 58%;
-        max-width: 880px;
-    }
-}
-
-/* ≤ 1440px */
-@media (max-width: 1440px) {
-    .projects-layout-panel {
-        right: 4%;
-        width: 62%;
-        min-width: 420px;
-        max-width: 760px;
-        padding: 1.5rem 1.6rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
+/* ============================================================
+   MOBILE / TABLET (existing breakpoints, left unchanged)
+   ============================================================ */
 /* ≤ 768px (tablet / small laptop) */
 @media (max-width: 768px) {
     .projects-section-inner {

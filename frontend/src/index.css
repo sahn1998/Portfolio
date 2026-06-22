@@ -1,3 +1,7 @@
+/* ============================================================
+   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   Global reset; no responsive overrides needed here.
+   ============================================================ */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

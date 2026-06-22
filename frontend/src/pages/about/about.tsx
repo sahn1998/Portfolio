@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { NavigationBar } from '../../features/navigation/navbar';
 import './about.css';
+import './about.tier2.css';
+import './about.tier3.css';
 import '../../styles/global.css';
 import profileImage from '../../images/pages/about/sunghyun-ahn.jpg';
 
@@ -22,7 +24,6 @@ const AboutProfile: React.FC = () => (
                     className="about-profile-image"
                     alt="Sunghyun Ahn"
                 />
-                    Seoul → Seattle · Data & Curiosity
             </div>
         </div>
         <div className="about-profile-text">
@@ -43,7 +44,6 @@ const AboutProfile: React.FC = () => (
                 <span className="about-profile-highlight">
                 I consider myself a puzzle solver, an optimist, an innovator, and a global leader. 
                 </span>
-                <br></br>
                 I’m drawn to the kind of ambiguity where learning, analysis, and creativity overlap.
                 My work as an analyst, a researcher, and a data scientist taught me that curiosity is as essential as any technical skill.
                 It’s the mindset that pushes me to explore patterns, uncover insights, and build solutions that matter.

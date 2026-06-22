@@ -1,3 +1,9 @@
+/* ============================================================
+   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   No responsive overrides exist yet in this file; all rules
+   below apply at every screen size until TIER 2/3 blocks are
+   added here.
+   ============================================================ */
 .main-content {
     background-color: #000;
     min-height: 100vh;

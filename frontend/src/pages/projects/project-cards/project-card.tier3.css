@@ -1,0 +1,46 @@
+/* ============================================================
+   PROJECT CARD — TIER 3 — 1366x768  (1366px – 1919px)
+   Counterpart to project-card.css (Tier 1) and
+   project-card.tier2.css (Tier 2). Must be imported AFTER
+   project-card.tier2.css so these rules win in the
+   1366px–1919px range, where both tiers' max-width queries
+   are simultaneously true.
+
+   At this tier the projects-layout-panel caps at 760px wide
+   but the grid drops to 2 columns (see projects.tier3.css),
+   so cards land between Tier 1 and Tier 2 in width and get an
+   intermediate scale.
+   ============================================================ */
+@media (max-width: 1919px) {
+    .project {
+        gap: 0.85rem;
+        border-radius: 26px;
+        padding: 1.4rem 1.5rem 1.6rem;
+    }
+
+    .project-link {
+        border-radius: 14px;
+    }
+
+    .project-image {
+        height: 175px;
+        border-radius: 14px;
+    }
+
+    .project-text-section {
+        gap: 0.5rem;
+    }
+
+    .project-title {
+        font-size: 0.95rem;
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+    }
+
+    .date-title {
+        font-size: 0.55rem;
+        padding-top: 0.8rem;
+    }
+}

@@ -1,0 +1,76 @@
+/* ============================================================
+   HOMEPAGE — TIER 3 — 1366x768  (1366px – 1919px)
+   Counterpart to homepage.css (Tier 1) and homepage.tier2.css
+   (Tier 2). Must be imported AFTER homepage.tier2.css so these
+   rules win in the 1366px–1919px range, where both tiers'
+   max-width queries are simultaneously true.
+   ============================================================ */
+@media (max-width: 1919px) {
+    /* The Photo Label Box */
+    .homepage-photo-label {
+        top: 35%;     /* top should be 35% for all TIER 3 Photo Labels */
+        left: 5%;
+        width: 225px; /* width should be 225px for all TIER 3 Photo Labels */
+        height: 250px; /* height should be 250px for all TIER 3 Photo Labels */
+        padding: 1.75rem 2rem;
+    }
+
+    /* Top tag (TRAVEL X CODE ARCHIVE) */
+    .homepage-photo-label .label-meta {
+        font-size: .5rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        opacity: .7;
+        margin-bottom: 1rem;
+    }
+
+    /* Location */
+    .homepage-photo-label .label-location {
+        margin: 0;
+        font-size: 1.0rem;
+        text-transform: uppercase;
+    }
+
+    /* Subtitle line under location */
+    .homepage-photo-label .label-subtitle {
+        margin: 0.5rem 0 0.5rem; /* Bottom margin should be same as divider */
+        font-size: .6rem;
+        opacity: .9;
+    }
+
+    /* Divider */
+    .homepage-photo-label .label-divider {
+        margin: 0 0 0.5rem;
+    }
+
+    /* Bio story */
+    .homepage-photo-label .label-story {
+        font-size: .5rem;
+    }
+
+    .homepage-section-content {
+        position: relative; /* above overlay */
+        z-index: 2;         /* sits above overlay */
+
+        text-align: center;
+        padding: 5rem 2rem 5rem;
+
+        color: #1f2933;
+        font-family: "Titillium_Web variant0", sans-serif;
+    }
+
+    .homepage-section-content .section-label {
+        font-size: 1rem;
+    }
+
+    .homepage-section-content .section-title {
+        margin: 1.0rem 0 0;
+        font-size: 2.8rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .homepage-section-content .section-subtitle {
+        max-width: 600px;
+        font-size: 1.2rem;
+    }
+}

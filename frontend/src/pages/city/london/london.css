@@ -1,3 +1,7 @@
+/* ============================================================
+   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   No media query: these rules apply unless overridden below.
+   ============================================================ */
 .about-popover {
     position: fixed;
     left: calc(100% + 25rem); /* to the right of the button */
@@ -205,22 +209,26 @@
 
 
 
-/* Large screens: 1920px and up */
-@media (max-width: 2700px) {
+/* ============================================================
+   TIER 2 — 1920x1080  (1920px – 2559px)
+   ============================================================ */
+@media (max-width: 2559px) {
     .about-popover {
         width: 500px; /* wider on ultra-wide monitors */
         left: calc(100% + 30rem); /* adjust placement if needed */
     }
 
-    
+
     .about-chat-bubble {
         font-size: 1.3rem;
     }
 
 }
 
-/* Large screens: 1920px and up */
-@media (max-width: 2300px) {
+/* ============================================================
+   TIER 3 — 1366x768  (1366px – 1919px)
+   ============================================================ */
+@media (max-width: 1919px) {
     .about-popover {
         width: 500px; /* wider on ultra-wide monitors */
         left: calc(100% + 20rem); /* adjust placement if needed */

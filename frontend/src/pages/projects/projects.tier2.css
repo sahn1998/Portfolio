@@ -1,0 +1,15 @@
+/* ============================================================
+   PROJECTS — TIER 2 — 1920x1080  (1920px – 2559px)
+   Counterpart to projects.css (Tier 1) and projects.tier3.css
+   (Tier 3). All rules here are scoped to this tier's media
+   query, so import order relative to the other two files
+   doesn't matter for correctness, only for override priority
+   at the shared 1366px–1919px range (tier3 must load after
+   tier2 there — see projects.tsx).
+   ============================================================ */
+@media (max-width: 2559px) {
+    .projects-layout-panel {
+        width: 58%;
+        max-width: 880px;
+    }
+}
