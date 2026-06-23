@@ -148,13 +148,42 @@ body {
    ============================================================ */
 @media (max-width: 2559px) {
     .section-photo-label {
-        top: 25%;
+        top: 30%;
         left: 5%;
         width: 300px;
-        height: 300px;
+        height: 325px;
         padding: 1.25rem 1.5rem;
     }
 
+    /* Top tag */
+    .label-meta {
+        font-size: .6rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        opacity: .7;
+        margin-bottom: 1rem;
+    }
+
+    /* Location */
+    .label-location {
+        margin: 0;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    /* Subtitle line under location */
+    .label-subtitle {
+        margin: .3rem 0 1rem;
+        font-size: .7rem;
+        opacity: .9;
+    }
+
+    /* Divider */
+    .label-divider {
+        margin: 0 0 1rem;
+    }
+
+    /* Bio story */
     .label-story {
         font-size: .65rem;
     }

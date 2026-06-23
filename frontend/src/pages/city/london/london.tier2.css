@@ -1,0 +1,37 @@
+/* ============================================================
+   LONDON — TIER 2 — 1920x1080  (1920px – 2559px)
+   Counterpart to london.css (Tier 1) and london.tier3.css
+   (Tier 3). All rules here are scoped to this tier's media
+   query, so import order relative to the other two files
+   doesn't matter for correctness, only for override priority
+   at the shared 1366px–1919px range (tier3 must load after
+   tier2 there — see london.tsx).
+   ============================================================ */
+@media (max-width: 2559px) {
+    .about-popover {
+        width: 500px;
+        left: calc(100% + 16rem); /* keep popover within viewport bounds */
+    }
+
+    .about-chat-bubble {
+        font-size: 1.3rem;
+    }
+
+    .about-popover-close {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .about-photo-title {
+        font-size: 0.85rem;
+    }
+
+    .about-photo-text {
+        font-size: 0.78rem;
+    }
+
+    .about-photo-clickhint {
+        font-size: 0.9rem;
+    }
+}

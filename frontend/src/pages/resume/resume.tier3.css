@@ -1,0 +1,50 @@
+/* ============================================================
+   RESUME — TIER 3 — 1366x768  (1366px – 1919px)
+   Counterpart to resume.css (Tier 1) and resume.tier2.css
+   (Tier 2). Must be imported AFTER resume.tier2.css so these
+   rules win in the 1366px–1919px range, where both tiers'
+   max-width queries are simultaneously true.
+   ============================================================ */
+@media (max-width: 1919px) {
+    .resume-overlay-column {
+        right: 4%;
+        width: 50%;
+        min-width: 380px;
+        padding: 1.5rem 1.6rem;
+    }
+
+    .resume-kicker {
+        font-family: var(--font-family-regular);
+        font-size: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0 0 0.2rem;
+    }
+
+    .resume-title {
+        font-family: var(--title-font-family);
+        font-weight: 500;
+        font-size: 1rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--title-color);
+        margin: 0;
+    }
+
+    .resume-role {
+        font-size: 1rem;
+    }
+
+    .resume-company {
+        font-size: 0.8rem;
+    }
+
+    .resume-card-meta {
+        font-size: 0.8rem;
+    }
+
+    .resume-detail-list li {
+        font-size: 0.8rem;
+    }
+}

@@ -52,7 +52,6 @@ const AboutProfile: React.FC = () => (
                 <span className="about-inline-accent"> the What’s</span>,
                 <span className="about-inline-accent"> the Why’s</span>, and
                 <span className="about-inline-accent"> the How’s</span> every day.
-                <br></br>
                 Curiosity keeps the drive alive.
             </p>
         </div>

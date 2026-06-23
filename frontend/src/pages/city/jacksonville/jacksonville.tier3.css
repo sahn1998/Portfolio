@@ -1,0 +1,28 @@
+/* ============================================================
+   JACKSONVILLE — TIER 3 — 1366x768  (1366px – 1919px)
+   Counterpart to jacksonville.css (Tier 1) and
+   jacksonville.tier2.css (Tier 2). Must be imported AFTER
+   jacksonville.tier2.css so these rules win in the
+   1366px–1919px range, where both tiers' max-width queries
+   are simultaneously true.
+   ============================================================ */
+@media (max-width: 1919px) {
+    .jacksonville-popover {
+        width: 340px;
+        padding: 1rem 1.2rem 1.2rem;
+    }
+
+    .jacksonville-popover-close {
+        width: 28px;
+        height: 28px;
+        font-size: 0.95rem;
+    }
+
+    .jacksonville-photo-title {
+        font-size: 1.05rem;
+    }
+
+    .jacksonville-photo-text {
+        font-size: 0.75rem;
+    }
+}

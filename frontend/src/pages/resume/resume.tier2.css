@@ -1,20 +1,19 @@
 /* ============================================================
-   PROJECTS — TIER 2 — 1920x1080  (1920px – 2559px)
-   Counterpart to projects.css (Tier 1) and projects.tier3.css
+   RESUME — TIER 2 — 1920x1080  (1920px – 2559px)
+   Counterpart to resume.css (Tier 1) and resume.tier3.css
    (Tier 3). All rules here are scoped to this tier's media
    query, so import order relative to the other two files
    doesn't matter for correctness, only for override priority
    at the shared 1366px–1919px range (tier3 must load after
-   tier2 there — see projects.tsx).
+   tier2 there — see resume.tsx).
    ============================================================ */
 @media (max-width: 2559px) {
-    .projects-layout-panel {
-        width: 58%;
-        max-width: 880px;
+    .resume-overlay-column {
+        width: 42%;
+        max-width: 620px;
     }
 
-    /* Should be same font size as resume-kicker*/
-    .projects-kicker {
+    .resume-kicker {
         font-family: var(--font-family-regular);
         font-size: 0.7rem;
         text-transform: uppercase;
@@ -23,8 +22,7 @@
         margin: 0 0 0.2rem;
     }
 
-    /* Should be same font size as resume-title */
-    .projects-title {
+    .resume-title {
         font-family: var(--title-font-family);
         font-weight: 500;
         font-size: 1.3rem;
@@ -34,4 +32,19 @@
         margin: 0;
     }
 
+    .resume-role {
+        font-size: 1.2rem;
+    }
+
+    .resume-company {
+        font-size: 1rem;
+    }
+
+    .resume-card-meta {
+        font-size: 0.8rem;
+    }
+
+    .resume-detail-list li {
+        font-size: 0.8rem;
+    }
 }

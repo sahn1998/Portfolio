@@ -9,9 +9,45 @@
    ============================================================ */
 @media (max-width: 2559px) {
 
+    .about-section-inner {
+        padding: 4rem 1.8rem 1.8rem;
+    }
+
+
     /* Panel shrinks slightly */
     .about-layout-panel {
-        width: 50%;
+        width: 55%;
+    }
+
+    .about-hero-kicker {
+        font-family: var(--font-family-regular);
+        font-size: 0.8rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .about-profile-row {
+        grid-template-columns: 385px minmax(0, 1fr);
+    }
+
+    .about-profile-image-wrap {
+        display: flex;
+        justify-content: left;
+    }
+
+    /* Image slightly smaller */
+    .about-profile-card {
+        max-width: 500px;
+        height: 500px;
+    }
+
+    .about-profile-text {
+        font-family: var(--font-family-light);
+        color: var(--reg-text-color);
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
     }
 
     /* Hero title slightly smaller */
@@ -25,12 +61,41 @@
     }
 
     .about-profile-list p {
+        font-size: 1.2rem;
+    }
+
+    .pillar-card {
+        padding: 0.9rem 0.9rem;
+    }
+
+    .pillar-label {
         font-size: 1rem;
     }
 
-    /* Image slightly smaller */
-    .about-profile-card {
-        max-width: 520px;
-        height: 600px;
+    .pillar-text {
+        font-size: 0.8rem;
     }
+
+    .about-hero-inner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-hero-title {
+        font-size: 1rem;
+        line-height: 0em;
+        letter-spacing: 0.06em;
+        margin-bottom: 0rem;
+    }
+
+    /* Button very compact */
+    .about-toggle-button {
+        bottom: 0.7rem;
+        right: 0.7rem;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.7rem;
+    }
+
 }

@@ -1,19 +1,28 @@
 /* ============================================================
-   SEATTLE — TIER 2 — 1920x1080  (1920px – 2559px)
-   Counterpart to seattle.css (Tier 1) and seattle.tier3.css
+   SEOUL — TIER 2 — 1920x1080  (1920px – 2559px)
+   Counterpart to seoul.css (Tier 1) and seoul.tier3.css
    (Tier 3). All rules here are scoped to this tier's media
    query, so import order relative to the other two files
    doesn't matter for correctness, only for override priority
    at the shared 1366px–1919px range (tier3 must load after
-   tier2 there — see seattle.tsx).
+   tier2 there — see seoul.tsx).
    ============================================================ */
 @media (max-width: 2559px) {
-    .seattle-title {
-        font-size: 3.4rem;
-        letter-spacing: 0.3rem;
+    .resume-popover {
+        width: 500px; /* wider on ultra-wide monitors */
+        left: calc(100% + 14rem); /* adjust placement if needed */
     }
 
-    .seattle-photo-label {
+    .seoul-resume-timeline-summary {
+        font-size: 0.75rem;
+    }
+
+    .seoul-resume-timeline-year {
+        font-size: 0.85rem;
+    }
+
+    /* The Photo Label Box */
+    .seoul-photo-label {
         top: 25%;
         left: 5%;
         width: 300px;
@@ -22,7 +31,7 @@
     }
 
     /* Top tag */
-    .seattle-photo-label .label-meta {
+    .seoul-photo-label .label-meta {
         font-size: .6rem;
         letter-spacing: .1em;
         text-transform: uppercase;
@@ -31,53 +40,26 @@
     }
 
     /* Location */
-    .seattle-photo-label .label-location {
+    .seoul-photo-label .label-location {
         margin: 0;
         font-size: 1rem;
         text-transform: uppercase;
     }
 
     /* Subtitle line under location */
-    .seattle-photo-label .label-subtitle {
+    .seoul-photo-label .label-subtitle {
         margin: .3rem 0 1rem;
         font-size: .7rem;
         opacity: .9;
     }
 
     /* Divider */
-    .seattle-photo-label .label-divider {
+    .seoul-photo-label .label-divider {
         margin: 0 0 1rem;
     }
 
     /* Bio story */
-    .seattle-photo-label .label-story {
+    .seoul-photo-label .label-story {
         font-size: .65rem;
-    }
-
-    .seattle-card-stack-container {
-        width: 800px;
-        height: 640px;
-    }
-
-    .seattle-card {
-        flex: 0 0 320px;
-        height: 480px;
-        margin-right: -64px;
-    }
-
-    .seattle-card-content {
-        padding: 0.85rem 0.95rem 1.1rem;
-    }
-
-    .seattle-card-label {
-        font-size: 0.62rem;
-    }
-
-    .seattle-card-title {
-        font-size: 0.95rem;
-    }
-
-    .seattle-card-subtitle {
-        font-size: 0.75rem;
     }
 }

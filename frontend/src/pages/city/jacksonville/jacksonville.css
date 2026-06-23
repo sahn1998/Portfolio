@@ -1,8 +1,9 @@
 /* ============================================================
-   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
-   No responsive overrides exist yet in this file; all rules
-   below apply at every screen size until TIER 2/3 blocks are
-   added here.
+   JACKSONVILLE — TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   This file holds ONLY the Tier 1 (base) rules.
+   See jacksonville.tier2.css (1920x1080) and
+   jacksonville.tier3.css (1366x768) for the other two
+   responsive tiers.
    ============================================================ */
 .jacksonville-detail--riverside {
     position: absolute;

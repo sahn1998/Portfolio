@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import "./jacksonville.css";
+import "./jacksonville.tier2.css";
+import "./jacksonville.tier3.css";
 import { NavigationBar } from '../../../features/navigation/navbar';
 import riversideImage from "../../../images/pages/city/jacksonville/riverside.jpg";
 

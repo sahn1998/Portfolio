@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavigationBar } from '../../features/navigation/navbar';
 import './resume.css';
+import './resume.tier2.css';
+import './resume.tier3.css';
 import '../../styles/global.css';
 
 import chemtopiaImage from '../../images/pages/resume/chemtopia.jpg';

@@ -1,11 +1,16 @@
 /* ============================================================
-   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
-   No media query: these rules apply unless overridden below.
+   SEOUL — TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   This file holds ONLY the Tier 1 (base) rules, plus the
+   existing mobile/tablet breakpoints (768px / 480px), which
+   are a separate system left untouched.
+   See seoul.tier2.css (1920x1080) and seoul.tier3.css
+   (1366x768) for the other two responsive tiers.
    ============================================================ */
 .resume-popover {
     position: fixed;
     left: calc(100% + 15rem); /* to the right of the button */
     width: 800px;
+    max-height: 75vh; /* cap the box; overflow scrolls inside .seoul-resume-timeline */
 
     background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
@@ -15,10 +20,13 @@
 
     font-family: ".titillium-web-light", sans-serif;
 
+    display: flex;
+    flex-direction: column;
+
     /* Bubble from the button */
     transform-origin: left center;
     animation: bubblePop 0.5s cubic-bezier(0.2, 0.7, 0.4, 1.1);
-    transition: width 0.4s ease, left 0.4s ease;
+    transition: width 0.4s ease, left 0.4s ease, max-height 0.4s ease;
 }
 
 /* Header */
@@ -27,6 +35,7 @@
     justify-content: center;
     display: flex;
     align-items: center;
+    flex-shrink: 0; /* stay fixed at the top while the timeline scrolls */
     text-align: left; /* updated: no centering */
     padding-right: 2rem; /* ensure text doesn't overlap the close button */
 }
@@ -66,11 +75,21 @@
 }
 
 /* Vertical timeline structure (inner container) */
-.resume-timeline {
+.seoul-resume-timeline {
     margin-top: 1.2rem;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+
+    flex: 1 1 auto;
+    min-height: 0;       /* allow the flex child to shrink below content height */
+    overflow-y: auto;
+    padding-right: 0.4rem; /* keep text clear of the (hidden) scrollbar */
+    scrollbar-width: none; /* Firefox */
+}
+
+.seoul-resume-timeline::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Edge */
 }
 
 /* Wrapper for each year group */
@@ -80,7 +99,7 @@
 }
 
 /* NEW: Dot + year as horizontal row */
-.resume-timeline-header-row {
+.seoul-resume-timeline-header-row {
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -88,7 +107,7 @@
 }
 
 /* Dot next to year (kept your style, adjusted sizing for alignment) */
-.resume-timeline-dot {
+.seoul-resume-timeline-dot {
     width: 14px;
     height: 14px;
     border-radius: 999px;
@@ -98,7 +117,7 @@
 }
 
 /* Year label */
-.resume-timeline-year {
+.seoul-resume-timeline-year {
     font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -120,29 +139,25 @@
 }
 
 /* Individual timeline entries (per role) */
-.resume-timeline-item {
+.seoul-resume-timeline-item {
     margin-bottom: 0; /* gap handled by parent */
 }
 
-.resume-timeline-title {
+.seoul-resume-timeline-title {
     margin: 0;
     font-size: 0.95rem;
     font-weight: 600;
 }
 
-.resume-timeline-location {
+.seoul-resume-timeline-location {
     display: flex;
-    justify-content: space-between;
-    
+    flex-direction: column;
+    gap: 0.15rem;
+
     font-size: 0.8rem;
     opacity: 0.75;
     line-height: 1.4;
     margin: 0.4rem 0 0;
-}
-
-/* Optional tweaks for spacing refinement */
-.location-text {
-    padding-right: 0.5rem; /* small buffer from edge if needed */
 }
 
 .location-year {
@@ -151,7 +166,7 @@
     opacity: 0.8;
 }
 
-.resume-timeline-summary {
+.seoul-resume-timeline-summary {
     margin: 0.7rem 0 0; /* add spacing above */
     padding-left: 1.2rem; /* indent bullets */
     opacity: 0.85;
@@ -159,12 +174,12 @@
     line-height: 1.4;
 }
 
-.resume-timeline-summary li {
+.seoul-resume-timeline-summary li {
     margin-bottom: 0.4rem;
 }
 
 /* Optional: Custom bullets using pseudo-elements */
-.resume-timeline-summary li::marker {
+.seoul-resume-timeline-summary li::marker {
     color: #69c3e6; /* match your dot color */
     font-weight: bold;
 }
@@ -222,51 +237,11 @@
     z-index: 10;
 }
 
-/* ============================================================
-   TIER 2 — 1920x1080  (1920px – 2559px)
-   ============================================================ */
-@media (max-width: 2559px) {
-    .resume-popover {
-        width: 500px; /* wider on ultra-wide monitors */
-        left: calc(100% + 14rem); /* adjust placement if needed */
-    }
-
-    .resume-timeline-summary {
-        font-size: 0.75rem;
-    }
-
-    .resume-timeline-year {
-        font-size: 0.85rem;
-    }
-}
-
-/* ============================================================
-   TIER 3 — 1366x768  (1366px – 1919px)
-   ============================================================ */
-@media (max-width: 1919px) {
-    .resume-popover {
-        width: 500px; /* wider on ultra-wide monitors */
-        left: calc(100% + 9rem); /* adjust placement if needed */
-    }
-
-    .resume-timeline-summary {
-        font-size: 0.75rem;
-    }
-
-    .resume-timeline-year {
-        font-size: 0.85rem;
-    }
-}
-
 /* ========================= */
 /* LEFT: PHOTO LABEL        */
 /* (unchanged positioning)  */
 /* ========================= */
 
-/* ============================================================
-   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
-   No media query: these rules apply unless overridden below.
-   ============================================================ */
 .seoul-photo-label {
     position: absolute;
     top: 25%;
@@ -339,70 +314,6 @@
     text-justify: inter-word;
 }
 
-
-/* ============================================================
-   TIER 2 — 1920x1080  (1920px – 2559px)
-   ============================================================ */
-@media (max-width: 2559px) {
-    .seoul-photo-label {
-        top: 25%;
-        left: 5%;
-        width: 300px;
-        height: 300px;
-        padding: 1.25rem 1.5rem;
-    }
-
-    .seoul-photo-label .label-story {
-        font-size: .65rem;
-    }
-}
-
-/* ============================================================
-   TIER 3 — 1366x768  (1366px – 1919px)
-   ============================================================ */
-@media (max-width: 1919px) {
-    /* The Photo Label Box */
-    .seoul-photo-label {
-        top: 35%;     /* top should be 35% for all TIER 3 Photo Labels */
-        left: 5%;
-        width: 225px; /* width should be 225px for all TIER 3 Photo Labels */
-        height: 250px; /* height should be 250px for all TIER 3 Photo Labels */
-        padding: 1.75rem 2rem;
-    }
-
-    /* Top tag */
-    .seoul-photo-label .label-meta {
-        font-size: .5rem;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        opacity: .7;
-        margin-bottom: 1rem;
-    }
-
-    /* Location */
-    .seoul-photo-label .label-location {
-        margin: 0;
-        font-size: 1.0rem;
-        text-transform: uppercase;
-    }
-
-    /* Subtitle line under location */
-    .seoul-photo-label .label-subtitle {
-        margin: 0.5rem 0 0.5rem;
-        font-size: .6rem;
-        opacity: .9;
-    }
-
-    /* Divider */
-    .seoul-photo-label .label-divider {
-        margin: 0 0 0.5rem;
-    }
-
-    /* Bio story */
-    .seoul-photo-label .label-story {
-        font-size: .5rem;
-    }
-}
 
 /* ============================================================
    MOBILE / TABLET (existing breakpoints, left unchanged)

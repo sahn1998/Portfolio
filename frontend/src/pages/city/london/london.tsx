@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import "./london.css";
+import "./london.tier2.css";
+import "./london.tier3.css";
 import aboutPhoto from "../../../images/pages/city/london/aboutme.jpg";
 import { NavigationBar } from '../../../features/navigation/navbar';
 

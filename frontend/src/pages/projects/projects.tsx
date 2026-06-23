@@ -30,11 +30,11 @@ export const InteractiveProjects = () => {
                         <div className="label-divider"></div>
 
                         <p className="label-story">
-                            Every project here started as a question: How a distribution behaves, what a dataset is hiding, why a model gets something wrong.
+                            The best questions don't announce themselves. They surface quietly in a residual that won't behave, a forecast that keeps drifting, a number that doesn't match the story everyone agreed on.
                             <br /><br />
-                            Some are interactive builds, others are write-ups from deeper dives into health, economics, and data analysis.
+                            These projects are where I followed those questions. Health systems, economic signals, the hidden structure underneath ordinary decisions. Each one taught me something I didn't expect to learn.
                             <br /><br />
-                            Pick a card to explore the work.
+                            Pick a card. See what I found.
                         </p>
                     </div>
 

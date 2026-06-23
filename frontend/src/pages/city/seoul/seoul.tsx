@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { NavigationBar } from '../../../features/navigation/navbar';
 
 import "./seoul.css";
+import "./seoul.tier2.css";
+import "./seoul.tier3.css";
 import "../../../styles/global.css";
 import "../../../styles/section.css";
 
@@ -94,28 +96,28 @@ export const SeoulResumeComponent: React.FC<SeoulResumeComponentProps> = ({ onCl
                 </button>
             </div>
 
-            <div className="resume-timeline">
+            <div className="seoul-resume-timeline">
                 {Object.keys(groupedTimeline)
                     .sort((a, b) => b.localeCompare(a)) // Optional: sort newest → oldest
                     .map((year) => (
                     <div className="resume-year-group" key={year}>
                         
                         {/* Marker dot + year horizontally aligned */}
-                        <div className="resume-timeline-header-row">
-                        <span className="resume-timeline-dot" />
-                        <span className="resume-timeline-year">{year}</span>
+                        <div className="seoul-resume-timeline-header-row">
+                        <span className="seoul-resume-timeline-dot" />
+                        <span className="seoul-resume-timeline-year">{year}</span>
                         </div>
                         
                         {/* Roles under this year */}
                         <div className="resume-group-items">
                         {groupedTimeline[year].map((item, idx) => (
-                            <div className="resume-timeline-item" key={idx}>
-                            <h4 className="resume-timeline-title">{item.title}</h4>
-                            <p className="resume-timeline-location">
+                            <div className="seoul-resume-timeline-item" key={idx}>
+                            <h4 className="seoul-resume-timeline-title">{item.title}</h4>
+                            <p className="seoul-resume-timeline-location">
                                 <span className="location-text">{item.location}</span>
                                 <span className="location-year">{item.year}</span>
                             </p>
-                            <ul className="resume-timeline-summary">
+                            <ul className="seoul-resume-timeline-summary">
                                 {item.summary.map((line, idx) => (
                                     <li key={idx}>{line}</li>
                                 ))}

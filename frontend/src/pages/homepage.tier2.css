@@ -9,16 +9,58 @@
    ============================================================ */
 @media (max-width: 2559px) {
     .homepage-photo-label {
-        top: 25%;
+        top: 30%;
         left: 5%;
         width: 300px;
-        height: 300px;
+        height: 325px;
         padding: 1.25rem 1.5rem;
     }
 
+    /* Top tag (TRAVEL X CODE ARCHIVE) */
+    .homepage-photo-label .label-meta {
+        font-size: .7rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        opacity: .7;
+        margin-bottom: 0.9rem;
+    }
+
+    /* Location */
+    .homepage-photo-label .label-location {
+        margin: 0;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    /* Subtitle line under location */
+    .homepage-photo-label .label-subtitle {
+        margin: 0.5rem 0 0.5rem; /* Bottom margin should be same as divider */
+        font-size: .8rem;
+        opacity: .9;
+    }
+
+    
+    /* Divider */
+    .homepage-photo-label .label-divider {
+        margin: 0 0 0.5rem;
+    }
+
+
+
     /* This is the main label part */
     .homepage-photo-label .label-story {
-        font-size: .65rem;
+        font-size: .6rem;
+    }
+
+    .homepage-section-content {
+        position: relative; /* above overlay */
+        z-index: 2;         /* sits above overlay */
+
+        text-align: center;
+        padding: 7rem 2rem 5rem;
+
+        color: #1f2933;
+        font-family: "Titillium_Web variant0", sans-serif;
     }
 
     .homepage-section-content .section-label {
@@ -26,7 +68,7 @@
     }
 
     .homepage-section-content .section-title {
-        margin: 3rem 0 0;
+        margin: 2rem 0 0;
         font-size: 4.5rem;
         letter-spacing: 0.3rem;
     }

@@ -1,0 +1,107 @@
+/* ============================================================
+   SEOUL — TIER 3 — 1366x768  (1366px – 1919px)
+   Counterpart to seoul.css (Tier 1) and seoul.tier2.css
+   (Tier 2). Must be imported AFTER seoul.tier2.css so these
+   rules win in the 1366px–1919px range, where both tiers'
+   max-width queries are simultaneously true.
+   ============================================================ */
+@media (max-width: 1919px) {
+    .resume-popover {
+        width: 380px; /* narrower so it stays on-screen next to the centered button */
+        max-width: calc(100vw - 2rem); /* safety net against the viewport edge */
+        max-height: 55vh; /* shorter box; .seoul-resume-timeline scrolls the rest */
+        left: calc(100% + 3rem); /* adjust placement if needed */
+        padding: 1.1rem 1.2rem;
+    }
+
+    .resume-popover-close {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .seoul-resume-timeline {
+        margin-top: 1rem;
+        gap: 1.1rem;
+    }
+
+    .seoul-resume-timeline-header-row {
+        margin-bottom: 1rem;
+    }
+
+    .seoul-resume-timeline-dot {
+        width: 11px;
+        height: 11px;
+    }
+
+    .seoul-resume-timeline-year {
+        font-size: 0.78rem;
+    }
+
+    .resume-group-items {
+        margin-left: 1rem;
+        padding-left: 1.5rem;
+        gap: 1.4rem;
+    }
+
+    .seoul-resume-timeline-title {
+        font-size: 0.82rem;
+    }
+
+    .seoul-resume-timeline-location {
+        font-size: 0.68rem;
+    }
+
+    .location-text,
+    .location-year {
+        font-size: 0.68rem;
+    }
+
+    .seoul-resume-timeline-summary {
+        padding-left: 1rem;
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+
+    /* The Photo Label Box */
+    .seoul-photo-label {
+        top: 35%;     /* top should be 35% for all TIER 3 Photo Labels */
+        left: 5%;
+        width: 225px; /* width should be 225px for all TIER 3 Photo Labels */
+        height: 250px; /* height should be 250px for all TIER 3 Photo Labels */
+        padding: 1.75rem 2rem;
+    }
+
+    /* Top tag */
+    .seoul-photo-label .label-meta {
+        font-size: .5rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        opacity: .7;
+        margin-bottom: 1rem;
+    }
+
+    /* Location */
+    .seoul-photo-label .label-location {
+        margin: 0;
+        font-size: 1.0rem;
+        text-transform: uppercase;
+    }
+
+    /* Subtitle line under location */
+    .seoul-photo-label .label-subtitle {
+        margin: 0.5rem 0 0.5rem;
+        font-size: .6rem;
+        opacity: .9;
+    }
+
+    /* Divider */
+    .seoul-photo-label .label-divider {
+        margin: 0 0 0.5rem;
+    }
+
+    /* Bio story */
+    .seoul-photo-label .label-story {
+        font-size: .5rem;
+    }
+}

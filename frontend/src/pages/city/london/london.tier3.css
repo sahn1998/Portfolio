@@ -1,0 +1,35 @@
+/* ============================================================
+   LONDON — TIER 3 — 1366x768  (1366px – 1919px)
+   Counterpart to london.css (Tier 1) and london.tier2.css
+   (Tier 2). Must be imported AFTER london.tier2.css so these
+   rules win in the 1366px–1919px range, where both tiers'
+   max-width queries are simultaneously true.
+   ============================================================ */
+@media (max-width: 1919px) {
+    .about-popover {
+        width: 300px; /* narrower so it still fits beside the button on smaller screens */
+        left: calc(100% + 10rem); /* keep popover within viewport bounds */
+    }
+
+    .about-chat-bubble {
+        font-size: 1rem;
+    }
+
+    .about-popover-close {
+        width: 28px;
+        height: 28px;
+        font-size: 0.95rem;
+    }
+
+    .about-photo-title {
+        font-size: 0.8rem;
+    }
+
+    .about-photo-text {
+        font-size: 0.7rem;
+    }
+
+    .about-photo-clickhint {
+        font-size: 0.7rem;
+    }
+}

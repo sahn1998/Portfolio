@@ -1,10 +1,12 @@
 /* ============================================================
-   TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
-   No media query: these rules apply unless overridden below.
+   LONDON — TIER 1 — 2560x1440 AND ABOVE (BASE / DEFAULT STYLES)
+   This file holds ONLY the Tier 1 (base) rules.
+   See london.tier2.css (1920x1080) and london.tier3.css
+   (1366x768) for the other two responsive tiers.
    ============================================================ */
 .about-popover {
     position: fixed;
-    left: calc(100% + 25rem); /* to the right of the button */
+    left: calc(100% + 16rem); /* to the right of the button */
     width: 800px;
 
     background: rgba(255, 255, 255, 0.88);
@@ -207,35 +209,3 @@
     pointer-events: none; /* click goes through to image */
 }
 
-
-
-/* ============================================================
-   TIER 2 — 1920x1080  (1920px – 2559px)
-   ============================================================ */
-@media (max-width: 2559px) {
-    .about-popover {
-        width: 500px; /* wider on ultra-wide monitors */
-        left: calc(100% + 30rem); /* adjust placement if needed */
-    }
-
-
-    .about-chat-bubble {
-        font-size: 1.3rem;
-    }
-
-}
-
-/* ============================================================
-   TIER 3 — 1366x768  (1366px – 1919px)
-   ============================================================ */
-@media (max-width: 1919px) {
-    .about-popover {
-        width: 500px; /* wider on ultra-wide monitors */
-        left: calc(100% + 20rem); /* adjust placement if needed */
-    }
-
-    .about-chat-bubble {
-        font-size: 1.3rem;
-    }
-
-}

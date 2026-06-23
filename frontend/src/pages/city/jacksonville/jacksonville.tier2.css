@@ -1,0 +1,29 @@
+/* ============================================================
+   JACKSONVILLE — TIER 2 — 1920x1080  (1920px – 2559px)
+   Counterpart to jacksonville.css (Tier 1) and
+   jacksonville.tier3.css (Tier 3). All rules here are scoped
+   to this tier's media query, so import order relative to the
+   other two files doesn't matter for correctness, only for
+   override priority at the shared 1366px–1919px range (tier3
+   must load after tier2 there — see jacksonville.tsx).
+   ============================================================ */
+@media (max-width: 2559px) {
+    .jacksonville-popover {
+        width: 420px;
+        padding: 1.1rem 1.3rem 1.3rem;
+    }
+
+    .jacksonville-popover-close {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .jacksonville-photo-title {
+        font-size: 1.25rem;
+    }
+
+    .jacksonville-photo-text {
+        font-size: 0.82rem;
+    }
+}
