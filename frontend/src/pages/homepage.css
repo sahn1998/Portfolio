@@ -179,11 +179,66 @@
     text-justify: inter-word;
 }
 
+/* ========================= */
+/* RIGHT: GLOBE HINT BUBBLE */
+/* ========================= */
+
+.globe-hint-bubble {
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translateY(-50%);
+    z-index: 3;
+    pointer-events: none;
+
+    max-width: 220px;
+    padding: 0.9rem 1.4rem;
+
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 999px;
+
+    animation: globe-hint-float 3s ease-in-out infinite;
+}
+
+.globe-hint-bubble::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    transform: translateY(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.globe-hint-bubble p {
+    margin: 0;
+    font-family: "Caveat", cursive;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #ffffff;
+}
+
+@keyframes globe-hint-float {
+    0%, 100% { transform: translateY(-50%); }
+    50% { transform: translateY(calc(-50% - 8px)); }
+}
+
 /* ============================================================
    MOBILE / TABLET (existing breakpoints, left unchanged)
    ============================================================ */
 /* Large mobile / small tablet (up to 768px width) */
 @media (max-width: 768px) {
+    .globe-hint-bubble {
+        display: none;
+    }
+
     .homepage-photo-label {
         top: auto;
         bottom: 2rem; /* moves it to the bottom for visual clarity */

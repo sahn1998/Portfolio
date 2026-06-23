@@ -73,4 +73,14 @@
         max-width: 600px;
         font-size: 1.2rem;
     }
+
+    .globe-hint-bubble {
+        right: 4%;
+        max-width: 160px;
+        padding: 0.6rem 1rem;
+    }
+
+    .globe-hint-bubble p {
+        font-size: 1rem;
+    }
 }

@@ -195,7 +195,11 @@ export const HomePage: React.FC = () => {
             />
 
         </div>
-        
+
+        <div className="globe-hint-bubble">
+            <p>Click on the cities to explore</p>
+        </div>
+
     </section>
   );
 };
